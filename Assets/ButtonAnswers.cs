@@ -9,6 +9,15 @@ public class ButtonAnswers : MonoBehaviour
     public Transform[] tickImage;
     public ColorBlock colorBlock;
     public ColorBlock defaultColor;
+
+
+
+    public void Correct(){
+        KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()] = true;
+    }
+    public void Wrong(){
+        KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()] = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +36,7 @@ public class ButtonAnswers : MonoBehaviour
         colorBlock = NoButtons[0].GetComponent<Button>().colors;
         defaultColor = colorBlock;
 
+        //Button Behaviours
         for(int l = 0; l < transform.childCount;l++){
             if(l == 0){
             transform.GetChild(l).transform.GetComponent<Button>().onClick.AddListener(ButtonClicked1);
@@ -39,7 +49,19 @@ public class ButtonAnswers : MonoBehaviour
             transform.GetChild(l).transform.GetComponent<Button>().onClick.AddListener(ButtonClicked4);
             }
         }
+
+        for(int j = 0; j < transform.childCount;j++){
+            CorrectAnswer CA = transform.GetChild(j).GetComponent<CorrectAnswer>();
+
+            if(CA){
+                transform.GetChild(j).GetComponent<Button>().onClick.AddListener(Correct);
+            }else{
+                transform.GetChild(j).GetComponent<Button>().onClick.AddListener(Wrong);
+            }
+        }
     }
+
+
 
 
     public void ButtonClicked1(){

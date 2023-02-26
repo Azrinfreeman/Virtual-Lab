@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ButtonBehaviour : MonoBehaviour
 {
     public bool hasClicked =false;
@@ -16,4 +16,5 @@ public class ButtonBehaviour : MonoBehaviour
     {
         
     }
+  
 }

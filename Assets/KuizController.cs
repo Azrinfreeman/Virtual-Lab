@@ -12,6 +12,8 @@ public class KuizController : MonoBehaviour
     public int scores;
     public Transform[] NoSoalan;
     public int numSoalan;
+
+    public bool[] soalanAnswer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,19 @@ public class KuizController : MonoBehaviour
         for(int i =0; i < numSoalan; i++){
             NoSoalan[i] = transform.GetChild(i);
         }
+
+        soalanAnswer = new bool[transform.childCount];
+    }
+
+    public void checkAnswers(){
+        //count soalan
+        
+        for(int i = 0; i < transform.childCount; i++){
+            if(soalanAnswer[i]){
+                scores++;
+            }
+        }
+        
     }
 
     // Update is called once per frame
