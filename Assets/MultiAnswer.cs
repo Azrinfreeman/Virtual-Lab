@@ -33,7 +33,7 @@ public class MultiAnswer : MonoBehaviour
         
         if(SceneManager.GetActiveScene().name == "2.4"){
 
-            if(transform.parent.transform.parent.name == "1"){
+            if(transform.parent.name == "1"){
 
             
                 if(answers[0].isOn && !answers[1].isOn && !answers[2].isOn && answers[3].isOn && answers[4].isOn ){
