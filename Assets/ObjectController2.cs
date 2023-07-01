@@ -1,0 +1,2114 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class ObjectController2 : MonoBehaviour
+{
+    public static ObjectController2 instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    public Animator anim;
+
+    public int Eksperimen;
+    public TextMeshProUGUI text;
+    public TextMeshProUGUI textHistory;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        text = GameObject.Find("textInventory").GetComponent<TextMeshProUGUI>();
+    }
+
+    public void Untouch()
+    {
+        for (int i = 0; i < TouchController2.instance.alat.Length; i++)
+        {
+
+            TouchController2.instance.alat[i].GetChild(0).transform.GetComponent<Outline>().enabled = false;
+            TouchController2.instance.alat[i].GetChild(0).transform.GetComponent<SelectedController>().isSelected = false;
+
+        }
+    }
+
+    IEnumerator TrueAndFalseWithTimeTwo(float time, int i, int l)
+    {
+        TouchController2.instance.alat[i].GetComponent<DragController>().isStop = true;
+        TouchController2.instance.alat[l].GetComponent<DragController>().isStop = true;
+        yield return new WaitForSeconds(time);
+
+        TouchController2.instance.alat[i].GetComponent<DragController>().isStop = false;
+        TouchController2.instance.alat[l].GetComponent<DragController>().isStop = false;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+        //step 1
+        if (Eksperimen == 3)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep1"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan bikar larutan albumen dan silinder penyukat ";
+
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+
+                            anim.Play("step1");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 1));
+                            Untouch();
+
+
+                        }
+
+                    }
+                }
+            }
+
+            //step 2
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep2"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[2 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan silinder penyukat dan tabung uji A";
+                        textHistory.text = "1. Tekan bikar larutan albumen dan silinder penyukat. \n";
+                        if (TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step2");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 3, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 3
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep3"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[3 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan asid hidroklorik cair dan silinder penyukat";
+                        textHistory.text = "2. Tekan silinder penyukat dan tabung uji A \n";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step3");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 2));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 4
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep4"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[4 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "3. Tekan asid hidroklorik cair dan silinder penyukat";
+                        text.text = "Tekan silinder penyukat dan tabung uji A";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step4");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 5
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep5"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[5 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "4. Tekan silinder penyukat dan tabung uji A";
+                        text.text = "Goncang tabung uji A";
+                        if (
+                        TouchController2.instance.alat[3].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[5 - 1].gameObject.SetActive(true);
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+            //step 6
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep6"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[6 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[6 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "5. Goncang tabung uji A";
+                        text.text = "Tekan larutan pepsin 1% dan silinder penyukat";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step6");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 4));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep7"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[7 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "6. Tekan larutan pepsin 1% dan silinder penyukat";
+                        text.text = "Tekan silinder penyukat mengandungi larutan pepsin dan tabung uji A";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step7");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+
+            //step 8
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep8"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[8 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "7. Tekan silinder penyukat mengandungi larutan pepsin dan tabung uji A";
+                        text.text = "Goncang tabung uji A";
+                        if (//TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[3].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[8 - 1].gameObject.SetActive(true);
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 9
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep9"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[9 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "9. Goncang tabung uji A";
+                        text.text = "Tekan Ampaian Albumen dan silinder penyukat";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step9");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+
+            //step 10
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep10"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[10 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "9. Tekan Ampaian Albumen dan silinder penyukat";
+                        text.text = "Tekan ampaian albumen dan tabung uji B";
+                        if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step10");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 5, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 11
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep11"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[11 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[11 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "10. Tekan ampaian albumen dan tabung uji B";
+                        text.text = "Tekan asid hidroklorik (1 ml) dan silinder penyukat";
+                        if (TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step11");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 2, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+            //step 12
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep12"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[12 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[12 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "11. Tekan Silinder Penyukat berisi larutan asid hidroklorik dan tabung uji B";
+                        text.text = "Tekan Silinder Penyukat berisi larutan asid hidroklorik dan tabung uji B";
+                        if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step12");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 5, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+            //step 13
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep13"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[13 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "12. Tekan Silinder Penyukat berisi larutan asid hidroklorik dan tabung uji B";
+                        text.text = "Goncang tabung uji B";
+                        if (//TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[5].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[13 - 1].gameObject.SetActive(true);
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 14
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep14"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[14 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[14 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "13. Goncang tabung uji B";
+                        text.text = "Tekan air suling dan silinder penyukat";
+                        if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step14");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 6, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 15
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep15"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[15 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[15 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "14. Tekan air suling dan silinder penyukat";
+                        text.text = "Tekan air suling dari silinder penyukat dan tabung uji B";
+                        if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step15");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 5, 1));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+            //step 16
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep16"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[16 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[16 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "15. Tekan air suling dari silinder penyukat dan tabung uji B";
+                        text.text = "Goncang tabung uji B";
+                        if (TouchController2.instance.alat[5].GetChild(0).GetComponent<SelectedController>().isSelected)//&&
+                        //TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[16 - 1].gameObject.SetActive(true);
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+
+            //step 17
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep17"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[17 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "16. Goncang tabung uji B";
+                        text.text = "Klik penunu Bunsen untuk nyalakan api";
+                        if (TouchController2.instance.alat[7].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        //TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected
+                        {
+                            ButtonControllers.instance.buttons[17 - 1].gameObject.SetActive(true);
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep18"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[18 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "17. Klik penunu Bunsen untuk nyalakan api";
+                        text.text = "Tekan tabung uji A dan bikar kukus air";
+                        if (TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide &&
+                            TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step18");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 3, 9));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep19"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[19 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[19 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "18. Tekan tabung uji A dan bikar kukus air";
+                        text.text = "Tekan tabung uji B dan bikar kukus air";
+                        if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
+                            TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step19");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 5, 9));
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep20"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[20 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
+                    && !bstepsController.instance.bsteps[20 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        textHistory.text = "19.Tekan tabung uji B dan bikar kukus air";
+                        text.text = "Tetapkan jam randik 20 minit";
+                        if (//TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
+                            TouchController2.instance.alat[8].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[20 - 1].gameObject.SetActive(true);
+                            Untouch();
+                        }
+
+                    }
+                }
+            }
+        }
+
+        else if (Eksperimen == 4)
+
+        {
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep1"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan minyak masak dan picagari";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step1");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 7));
+
+                        }
+
+                    }
+                }
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep2"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan minyak dalam picagari dan tabung uji A";
+                        textHistory.text = "1. Tekan minyak masak dan picagari";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step2");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+
+                        }
+
+                    }
+                }
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep3"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar larutan natrium karbonat 0.2 M.";
+                        textHistory.text = "2. Tekan minyak dalam picagari dan tabung uji A. \n";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step3");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 6));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep4"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan tabung uji A ";
+                        textHistory.text = "3. Tekan picagari dan bikar larutan natrium karbonat 0.2 M.";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step4");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+
+                        }
+
+                    }
+                }
+            }
+
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep5"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar pencuci pinggan  ";
+                        textHistory.text = "4. Tekan picagari dan tabung uji A. ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[8].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step5");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 8));
+
+                        }
+
+                    }
+                }
+
+            }
+
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep6"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[6 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari (warna hijau) dan tabung uji A   ";
+                        textHistory.text = "5. Tekan picagari dan bikar pencuci pinggan   ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step6");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep7"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tutup tabung uji A dengan penutup tabung uji ";
+                        textHistory.text = "6. Tekan picagari (warna hijau) dan tabung uji A     ";
+                        if (TouchController2.instance.alat[3].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        //TouchController2.instance.alat[3].GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[7 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep8"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Shake (goncang) tabung uji A dengan kuat ";
+                        textHistory.text = "7. Tutup tabung uji A dengan penutup tabung uji   ";
+                        if (TouchController2.instance.alat[3].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        //TouchController2.instance.alat[3].GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[8 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+
+            }
+
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep9"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar minyak masak ";
+                        textHistory.text = "8. Shake (goncang) tabung uji A dengan kuat  ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step9");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 7));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep10"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari (ada minyak masak) dan tabung uji B ";
+                        textHistory.text = "9. Tekan picagari dan bikar minyak masak  ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step10");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 4));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep11"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[11 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar larutan natrium  ";
+                        textHistory.text = "10. Tekan picagari (ada minyak masak) dan tabung uji B   ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step11");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 6));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep12"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[12 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari larutan natrium hidroksida dan tabung uji B ";
+                        textHistory.text = "11. Tekan picagari dan bikar larutan natrium    ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step12");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 4));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep13"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar pencuci pinggan  ";
+                        textHistory.text = "12. Tekan picagari larutan natrium hidroksida dan tabung uji B  ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[8].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step13");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 8));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep14"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[14 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan tabung uji B ";
+                        textHistory.text = "13. Tekan picagari dan bikar pencuci pinggan   ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step14");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 4));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep15"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[15 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan penutup tabung uji dan tabung uji B di rak tabung uji";
+                        textHistory.text = "14. Tekan picagari dan tabung uji B ";
+                        if (//TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[4].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[15 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep16"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[16 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Klik tabung uji B untuk Shake (goncang) tabung B dengan kuat";
+                        textHistory.text = "15. Tekan penutup tabung uji dan tabung uji B di rak tabung uji ";
+                        if (//TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[4].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[16 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep17"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan penitis dan bikar larutan fenolftelin ";
+                        textHistory.text = "16. Klik tabung uji B untuk Shake (goncang) tabung B dengan kuat ";
+                        if (TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step17");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 2, 9));
+
+                        }
+
+                    }
+                }
+
+            }
+
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep18"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan penitis dan tabung uji A untuk titiskan 3 titis  ";
+                        textHistory.text = "17. TTekan penitis dan bikar larutan fenolftelin   ";
+                        if (TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step18");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 2, 3));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep19"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[19 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan penitis dan bikar larutan fenolftelin.  ";
+                        textHistory.text = "18. Tekan penitis dan tabung uji A untuk titiskan 3 titis   ";
+                        if (TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step19");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 2, 9));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep20"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[20 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan penitis (yang ada warna pink) dan tabung uji B untuk menitiskan 3 titis  ";
+                        textHistory.text = "19. Tekan penitis dan bikar larutan fenolftelin.  ";
+                        if (TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step20");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 2, 4));
+
+                        }
+
+                    }
+                }
+
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep21"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[21 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar enzim lipase  ";
+                        textHistory.text = "20. Tekan penitis (yang ada warna pink) dan tabung uji B untuk menitiskan 3 titis  ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step21");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 5));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep22"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[22 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari dan bikar enzim lipase ";
+                        textHistory.text = "21. Tekan picagari (ada minyak masak) dan tabung uji B   ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step22");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep23"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[23 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan botol air suling dan tabung uji B ";
+                        textHistory.text = "22. Tekan picagari dan bikar enzim lipase  ";
+                        if (TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step23");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 4, 10));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep24"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[24 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Nyalakan bunsen burner ";
+                        textHistory.text = "23. Tekan botol air suling dan tabung uji B    ";
+                        if (//TouchController2.instance.alat[4].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[11].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[24 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep25"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[25 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan tabung uji A dan kukus air ";
+                        textHistory.text = "24. Nyalakan bunsen burner ";
+                        if (TouchController2.instance.alat[13].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step25");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 13, 3));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep26"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[26 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan tabung uji B dan kukus air ";
+                        textHistory.text = "25. Tekan tabung uji A dan kukus air ";
+                        if (TouchController2.instance.alat[13].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step26");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 13, 4));
+
+                        }
+
+                    }
+                }
+
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep27"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[27 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Klik jam randik ";
+                        textHistory.text = "26. Tekan tabung uji B dan kukus air ";
+                        if (//TouchController2.instance.alat[3].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[12].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[27 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        else if (Eksperimen == 5)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep1"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan kacang gajus dan atas penimbang  ";
+                        if (TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step1");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 7, 3));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep3"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan botol air suling dan silinder penyukat untuk tekan 20 ml air suling";
+                        textHistory.text = "1. Tekan kacang gajus dan atas penimbang  ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step3");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 1));
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep4"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan silinder penyukat dan tabung didih";
+                        textHistory.text = "3. Tekan botol air suling dan silinder penyukat untuk tekan 20 ml air suling";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step4");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 4));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep9"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan kacang gajus dan jarum pada plastisin. ";
+                        textHistory.text = "8. Tekan silinder penyukat dan tabung didih";
+                        if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step9");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 5, 7));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep10"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Klik penunu Bunsen. ";
+                        textHistory.text = "9. Tekan kacang gajus dan jarum pada plastisin. ";
+                        if (TouchController2.instance.alat[2].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        //TouchController2.instance.alat[7].GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[10 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep11"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[11 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan jarum yang ada plastisin dan kacang gajus dan juga penunu bunsen ";
+                        textHistory.text = "10. Klik penunu Bunsen";
+                        if (TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[7].GetComponent<SelectedController>().isSelected
+                        && TouchController2.instance.alat[2].GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[11 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep13"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan kacang gajus (yang masih menyala) dan tabung didih";
+                        textHistory.text = "11. Tekan jarum yang ada plastisin dan kacang gajus dan juga penunu bunsen ";
+                        if (TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            ButtonControllers.instance.buttons[13 - 1].gameObject.SetActive(true);
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep17"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan botol air suling dan silinder penyukat untuk masukkan 20ml air suling ";
+                        textHistory.text = "13. Tekan kacang gajus (yang masih menyala) dan tabung didih";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step13");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 1));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep18"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan silinder penyukat yang ada air suling dan tabung didih. ";
+                        textHistory.text = "17. Tekan botol air suling dan silinder penyukat untuk masukkan 20ml air suling ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step18");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 4));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep23"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[23 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan kacang gajus dan pemberat. ";
+                        textHistory.text = "18. Tekan silinder penyukat yang ada air suling dan tabung didih. ";
+                        if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step23");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 6, 3));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep25"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[25 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan kacang tanah dan jarum pada plastisin.  ";
+                        textHistory.text = "23. Tekan kacang gajus dan pemberat.";
+                        if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step25");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 6, 5));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep26"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[26 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan penunu bunsen.  ";
+                        textHistory.text = "25. Tekan kacang tanah dan jarum pada plastisin.";
+                        if (//TouchController2.instance.alat[6].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[2].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[26 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep27"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[27 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan jarum yang ada plastisin dan kacang tanah dan penunu bunsen ";
+                        textHistory.text = "26. Tekan penunu bunsen. ";
+                        if (TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[2].GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[27 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        else if (Eksperimen == 6)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep1"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
+
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step1");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 7));
+
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep2"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan larutan DCPIP dan tiub spesimen 1";
+                        textHistory.text = "1. Tekan picagari 1ml dan larutan DCPIP ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step2");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 5));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep3"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
+                        textHistory.text = "2. Tekan larutan DCPIP dan tiub spesimen 1 ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step3");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 7));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep4"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan larutan DCPIP dan tiub spesimen 2";
+                        textHistory.text = "3. Tekan picagari 1ml dan larutan DCPIP";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step5");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 4));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep5"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
+                        textHistory.text = "4. Tekan larutan DCPIP dan tiub spesimen 2";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step5");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 7));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep6"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[6 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan larutan DCPIP dan tiub spesimen 3";
+                        textHistory.text = "5. Tekan picagari 1ml dan larutan DCPIP";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step6");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 3));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep7"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
+                        textHistory.text = "6. Tekan larutan DCPIP dan tiub spesimen 3";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step7");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 7));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep8"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan larutan DCPIP dan tiub spesimen 4";
+                        textHistory.text = "7. Tekan picagari 1ml dan larutan DCPIP";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step8");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 2));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep9"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan larutan asid askorbik";
+
+                        textHistory.text = "8. Tekan larutan DCPIP dan tiub spesimen 4";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step9");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 6));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep10"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 1 ";
+                        textHistory.text = "9. Tekan picagari 5ml dan larutan asid askorbik";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step10");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 5));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep13"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan Jus Oren";
+                        textHistory.text = "10. Tekan picagari 5ml dan tiub specimen 1 ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[8].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step13");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 8));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep14"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[14 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 2 ";
+                        textHistory.text = "13. Tekan picagari 5ml dan Jus Oren";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step14");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 4));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep17"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan Jus Limau Nipis";
+                        textHistory.text = "14. Tekan picagari 5ml dan tiub specimen 2 ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step17");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 9));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep18"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 3 ";
+                        textHistory.text = "17. Tekan picagari 5ml dan Jus Limau Nipis";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step18");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep21"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[21 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan jus Lobak Merah";
+                        textHistory.text = "18. Tekan picagari 5ml dan tiub specimen 3 ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step21");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 10));
+
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep22"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[22 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 4 ";
+                        textHistory.text = "21. Tekan picagari 5ml dan jus Lobak Merah";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step22");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 2));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep23"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[23 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan jus Lobak Merah";
+                        textHistory.text = "22. Tekan picagari 5ml dan tiub specimen 4";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step23");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 10));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep24"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[24 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 4 ";
+                        textHistory.text = "23. Tekan picagari 5ml dan jus Lobak Merah";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step24");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 2));
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        else if (Eksperimen == 7)
+        {
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep1"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan bikar A dan bikar berisi ais ";
+                        if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step1");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 6, 10));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep2"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan bikar B dan bikar berisi air pada suhu bilik";
+                        textHistory.text = "1. Tekan bikar A dan bikar berisi ais ";
+                        if (TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[11].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step2");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 7, 11));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep3"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan bikar C dan bikar air mendidih ";
+                        textHistory.text = "2. Tekan bikar B dan bikar berisi air pada suhu bilik";
+                        if (TouchController2.instance.alat[8].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[12].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step3");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 8, 12));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep4"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tetapkan jam randik pada 30 minit ";
+                        textHistory.text = "3. Tekan bikar C dan bikar air mendidih";
+                        if (TouchController2.instance.alat[13].GetChild(0).GetComponent<SelectedController>().isSelected)
+                        {
+                            ButtonControllers.instance.buttons[4 - 1].gameObject.SetActive(true);
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep5"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP. ";
+                        textHistory.text = "4. Tetapkan jam randik pada 30 minit";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step5");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 9));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep6"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[6 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan tiub spesimen 1.  ";
+                        textHistory.text = "5. Tekan picagari 1ml dan larutan DCPIP.";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step6");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 5));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep7"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP.  ";
+                        textHistory.text = "6. Tekan picagari 1ml dan tiub spesimen 1. ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step7");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 9));
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep8"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan tiub spesimen 2  ";
+                        textHistory.text = "7. Tekan picagari 1ml dan larutan DCPIP. ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step8");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 4));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep9"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP.   ";
+                        textHistory.text = "8. Tekan picagari 1ml dan tiub spesimen 2";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step9");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 9));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep10"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan tiub spesimen 3 ";
+
+                        textHistory.text = "9. Tekan picagari 1ml dan larutan DCPIP. ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step10");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 3));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep11"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[11 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan larutan DCPIP.  ";
+                        textHistory.text = "10. Tekan picagari 1ml dan tiub spesimen 3  ";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step11");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 9));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep12"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[12 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 1ml dan tiub spesimen 4.   ";
+                        textHistory.text = "11. Tekan picagari 1ml dan larutan DCPIP.";
+                        if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step12");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 2));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep13"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan larutan asid askorbik. ";
+                        textHistory.text = "12. Tekan picagari 1ml dan tiub spesimen 4.";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[14].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step13");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 14));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep14"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[14 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 1. ";
+                        textHistory.text = "13. Tekan picagari 5ml dan larutan asid askorbik. ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step14");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 5));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep17"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan jus oren dalam Bikar A ";
+                        textHistory.text = "14. Tekan picagari 5ml dan tiub specimen 1. ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step17");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 10));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep18"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 2  ";
+                        textHistory.text = "17. Tekan picagari 5ml dan jus oren dalam Bikar A";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step18");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 4));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep21"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[21 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan jus oren dalam Bikar B.  ";
+                        textHistory.text = "18. Tekan picagari 5ml dan tiub specimen 2 ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[11].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step21");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 11));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep22"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[22 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 3  ";
+                        textHistory.text = "21. Tekan picagari 5ml dan jus oren dalam Bikar B. ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step22");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 3));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep25"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[25 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan jus oren dalam bikar C. ";
+                        textHistory.text = "22. Tekan picagari 5ml dan tiub specimen 3  ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[12].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step25");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 12));
+
+                        }
+
+                    }
+                }
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bstep26"))
+            {
+
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    if (bstepsController.instance.bsteps[26 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
+                    {
+                        text.text = "Tekan picagari 5ml dan tiub specimen 4. ";
+                        textHistory.text = "25. Tekan picagari 5ml dan jus oren dalam bikar C.  ";
+                        if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
+                        TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
+                        {
+                            anim.Play("step26");
+                            StartCoroutine(TrueAndFalseWithTimeTwo(2f, 1, 2));
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

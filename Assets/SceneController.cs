@@ -16,9 +16,14 @@ public class SceneController : MonoBehaviour
         
     }
 
+    IEnumerator waits(string name){
+        
+        yield return new  WaitForSeconds(1f);
+        SceneManager.LoadScene(name);
+    }
 
     public void ChangeScene(string name){
-        SceneManager.LoadScene(name);
+        StartCoroutine(waits(name));
     }
 
     public void QuitApplication(){

@@ -13,6 +13,8 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 
     [Header("4 slots")]
     public List<GameObject> slots;
+
+    public string Answer;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,14 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
-        public void OnBeginDrag(PointerEventData eventData)
+    public void OnBeginDrag(PointerEventData eventData)
     {
-       if (eventData.pointerDrag.tag == "bridge")
+        Debug.Log("drag");
+        if (eventData.pointerDrag.tag == "bridge")
         {
             Debug.Log("asfasf");
             for (int i = 0; i < slots.Count; i++)
@@ -44,16 +47,16 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         canvasGroup.blocksRaycasts = false;
 
 
-       
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
 
-       
+
         //Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -69,13 +72,15 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         //   Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-        
+
 
 
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-   //    Debug.Log("OnPointerDown");
+        //    Debug.Log("OnPointerDown");
     }
+
+
 }

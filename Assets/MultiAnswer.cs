@@ -35,18 +35,26 @@ public class MultiAnswer : MonoBehaviour
 
             if(transform.parent.name == "1"){
 
-            
+                
                 if(answers[0].isOn && !answers[1].isOn && !answers[2].isOn && answers[3].isOn && answers[4].isOn ){
                 
                 isTrue = true;
-                KuizController.instance.soalanAnswer[transform.parent.transform.parent.GetSiblingIndex()]= true;
+                KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()]= true;
                 }else{
                 isTrue = false;
-                KuizController.instance.soalanAnswer[transform.parent.transform.parent.GetSiblingIndex()]= false;
+                KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()]= false;
                 }
 
-            }else if (transform.parent.transform.parent.name == "10"){
-
+            }else if (transform.parent.name == "10"){
+                
+                if(answers[0].isOn && !answers[1].isOn && !answers[2].isOn && answers[3].isOn){
+                
+                isTrue = true;
+                KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()]= true;
+                }else{
+                isTrue = false;
+                KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()]= false;
+                }
             }
 
 
