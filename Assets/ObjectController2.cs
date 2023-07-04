@@ -58,7 +58,7 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan bikar larutan albumen dan silinder penyukat ";
+                        text.text = "Tarik bikar larutan albumen ke silinder penyukat ";
 
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
@@ -84,8 +84,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[2 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan silinder penyukat dan tabung uji A";
-                        textHistory.text = "1. Tekan bikar larutan albumen dan silinder penyukat. \n";
+                        text.text = "Tarik silinder penyukat ke tabung uji A";
+                        textHistory.text = "1. Tarik bikar larutan albumen ke silinder penyukat. \n";
                         if (TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -107,8 +107,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[3 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan asid hidroklorik cair dan silinder penyukat";
-                        textHistory.text = "2. Tekan silinder penyukat dan tabung uji A \n";
+                        text.text = "Tarik asid hidroklorik cair ke silinder penyukat";
+                        textHistory.text = "2. Tarik silinder penyukat ke tabung uji A \n";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
                         {
@@ -130,8 +130,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[4 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "3. Tekan asid hidroklorik cair dan silinder penyukat";
-                        text.text = "Tekan silinder penyukat dan tabung uji A";
+                        textHistory.text = "3. Tarik asid hidroklorik cair ke silinder penyukat";
+                        text.text = "Tarik silinder penyukat ke tabung uji A";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -153,8 +153,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[5 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "4. Tekan silinder penyukat dan tabung uji A";
-                        text.text = "Goncang tabung uji A";
+                        textHistory.text = "4. Tarik silinder penyukat ke tabung uji A";
+                        text.text = "Goncang tabung uji A(tekan tabung uji A)";
                         if (
                         TouchController2.instance.alat[3].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
@@ -175,7 +175,7 @@ public class ObjectController2 : MonoBehaviour
                     && !bstepsController.instance.bsteps[6 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
                         textHistory.text = "5. Goncang tabung uji A";
-                        text.text = "Tekan larutan pepsin 1% dan silinder penyukat";
+                        text.text = "Tarik larutan pepsin 1% ke silinder penyukat";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -198,8 +198,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[7 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "6. Tekan larutan pepsin 1% dan silinder penyukat";
-                        text.text = "Tekan silinder penyukat mengandungi larutan pepsin dan tabung uji A";
+                        textHistory.text = "6. Tarik larutan pepsin 1% ke silinder penyukat";
+                        text.text = "Tarik silinder penyukat mengandungi larutan pepsin ke tabung uji A";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -222,8 +222,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[8 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "7. Tekan silinder penyukat mengandungi larutan pepsin dan tabung uji A";
-                        text.text = "Goncang tabung uji A";
+                        textHistory.text = "7. Tarik silinder penyukat mengandungi larutan pepsin ke tabung uji A";
+                        text.text = "Goncang tabung uji A(tekan tabung uji A)";
                         if (//TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected &&
                         TouchController2.instance.alat[3].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
@@ -245,7 +245,7 @@ public class ObjectController2 : MonoBehaviour
                     && !bstepsController.instance.bsteps[9 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
                         textHistory.text = "9. Goncang tabung uji A";
-                        text.text = "Tekan Ampaian Albumen dan silinder penyukat";
+                        text.text = "Tarik Ampaian Albumen ke silinder penyukat";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -268,8 +268,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[10 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "9. Tekan Ampaian Albumen dan silinder penyukat";
-                        text.text = "Tekan ampaian albumen dan tabung uji B";
+                        textHistory.text = "9. Tarik Ampaian Albumen ke silinder penyukat";
+                        text.text = "Tarik ampaian albumen ke tabung uji B";
                         if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -291,8 +291,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[11 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[11 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "10. Tekan ampaian albumen dan tabung uji B";
-                        text.text = "Tekan asid hidroklorik (1 ml) dan silinder penyukat";
+                        textHistory.text = "10. Tarik ampaian albumen ke tabung uji B";
+                        text.text = "Tarik asid hidroklorik (1 ml) ke silinder penyukat";
                         if (TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -313,8 +313,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[12 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[12 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "11. Tekan Silinder Penyukat berisi larutan asid hidroklorik dan tabung uji B";
-                        text.text = "Tekan Silinder Penyukat berisi larutan asid hidroklorik dan tabung uji B";
+                        textHistory.text = "11. Tarik Silinder Penyukat berisi larutan asid hidroklorik ke tabung uji B";
+                        text.text = "Tarik Silinder Penyukat berisi larutan asid hidroklorik ke tabung uji B";
                         if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -335,8 +335,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[13 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "12. Tekan Silinder Penyukat berisi larutan asid hidroklorik dan tabung uji B";
-                        text.text = "Goncang tabung uji B";
+                        textHistory.text = "12. Tarik Silinder Penyukat berisi larutan asid hidroklorik ke tabung uji B";
+                        text.text = "Goncang tabung uji B(tekan tabung uji B)";
                         if (//TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
                         TouchController2.instance.alat[5].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
@@ -358,7 +358,7 @@ public class ObjectController2 : MonoBehaviour
                     && !bstepsController.instance.bsteps[14 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
                         textHistory.text = "13. Goncang tabung uji B";
-                        text.text = "Tekan air suling dan silinder penyukat";
+                        text.text = "Tarik air suling ke silinder penyukat";
                         if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -380,8 +380,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[15 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[15 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "14. Tekan air suling dan silinder penyukat";
-                        text.text = "Tekan air suling dari silinder penyukat dan tabung uji B";
+                        textHistory.text = "14. Tarik air suling ke silinder penyukat";
+                        text.text = "Tarik air suling dari silinder penyukat ke tabung uji B";
                         if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -403,8 +403,8 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[16 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[16 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "15. Tekan air suling dari silinder penyukat dan tabung uji B";
-                        text.text = "Goncang tabung uji B";
+                        textHistory.text = "15. Tarik air suling dari silinder penyukat ke tabung uji B";
+                        text.text = "Goncang tabung uji B(tekan tabung uji B)";
                         if (TouchController2.instance.alat[5].GetChild(0).GetComponent<SelectedController>().isSelected)//&&
                         //TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected)
                         {
@@ -515,7 +515,7 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan minyak masak dan picagari";
+                        text.text = "tarik  minyak masak ke picagari";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
                         {
@@ -1094,7 +1094,7 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan kacang gajus dan atas penimbang  ";
+                        text.text = "Tarik kacang gajus ke atas penimbang  ";
                         if (TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -1113,8 +1113,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan botol air suling dan silinder penyukat untuk tekan 20 ml air suling";
-                        textHistory.text = "1. Tekan kacang gajus dan atas penimbang  ";
+                        text.text = "Tarik botol air suling ke silinder penyukat untuk tekan 20 ml air suling";
+                        textHistory.text = "1. Tarik kacang gajus ke atas penimbang  ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -1132,8 +1132,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan silinder penyukat dan tabung didih";
-                        textHistory.text = "3. Tekan botol air suling dan silinder penyukat untuk tekan 20 ml air suling";
+                        text.text = "Tarik silinder penyukat ke tabung didih";
+                        textHistory.text = "3. Tarik botol air suling ke silinder penyukat untuk tekan 20 ml air suling";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -1152,8 +1152,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan kacang gajus dan jarum pada plastisin. ";
-                        textHistory.text = "8. Tekan silinder penyukat dan tabung didih";
+                        text.text = "Tarik kacang gajus ke jarum pada plastisin. ";
+                        textHistory.text = "8. Tarik silinder penyukat ke tabung didih";
                         if (TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
                         {
@@ -1173,7 +1173,7 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
                         text.text = "Klik penunu Bunsen. ";
-                        textHistory.text = "9. Tekan kacang gajus dan jarum pada plastisin. ";
+                        textHistory.text = "9. Tarik kacang gajus ke jarum pada plastisin. ";
                         if (TouchController2.instance.alat[2].GetChild(0).GetComponent<SelectedController>().isSelected)
                         //TouchController2.instance.alat[7].GetComponent<SelectedController>().isSelected)
                         {
@@ -1211,7 +1211,7 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan kacang gajus (yang masih menyala) dan tabung didih";
+                        text.text = "Tarik kacang gajus (yang masih menyala) ke tabung didih";
                         textHistory.text = "11. Tekan jarum yang ada plastisin dan kacang gajus dan juga penunu bunsen ";
                         if (TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
@@ -1229,8 +1229,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan botol air suling dan silinder penyukat untuk masukkan 20ml air suling ";
-                        textHistory.text = "13. Tekan kacang gajus (yang masih menyala) dan tabung didih";
+                        text.text = "Tarik botol air suling ke silinder penyukat untuk masukkan 20ml air suling ";
+                        textHistory.text = "13. Tarik kacang gajus (yang masih menyala) ke tabung didih";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
@@ -1249,8 +1249,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan silinder penyukat yang ada air suling dan tabung didih. ";
-                        textHistory.text = "17. Tekan botol air suling dan silinder penyukat untuk masukkan 20ml air suling ";
+                        text.text = "Tarik silinder penyukat yang ada air suling ke tabung didih. ";
+                        textHistory.text = "17. Tarik botol air suling ke silinder penyukat untuk masukkan 20ml air suling ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -1269,8 +1269,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[23 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan kacang gajus dan pemberat. ";
-                        textHistory.text = "18. Tekan silinder penyukat yang ada air suling dan tabung didih. ";
+                        text.text = "Tarik kacang gajus ke pemberat. ";
+                        textHistory.text = "18. Tarik silinder penyukat yang ada air suling ke tabung didih. ";
                         if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -1289,8 +1289,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[25 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan kacang tanah dan jarum pada plastisin.  ";
-                        textHistory.text = "23. Tekan kacang gajus dan pemberat.";
+                        text.text = "Tarik kacang tanah ke jarum pada plastisin.  ";
+                        textHistory.text = "23. Tarik kacang gajus ke pemberat.";
                         if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
                         {
@@ -1310,7 +1310,7 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[26 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
                         text.text = "Tekan penunu bunsen.  ";
-                        textHistory.text = "25. Tekan kacang tanah dan jarum pada plastisin.";
+                        textHistory.text = "25. Tarik kacang tanah ke jarum pada plastisin.";
                         if (//TouchController2.instance.alat[6].GetComponent<SelectedController>().isSelected &&
                         TouchController2.instance.alat[2].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
@@ -1351,7 +1351,7 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP";
 
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
@@ -1372,8 +1372,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan larutan DCPIP dan tiub spesimen 1";
-                        textHistory.text = "1. Tekan picagari 1ml dan larutan DCPIP ";
+                        text.text = "Tarik larutan DCPIP ke tiub spesimen 1";
+                        textHistory.text = "1. Tarik picagari 1ml ke larutan DCPIP ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
                         {
@@ -1392,8 +1392,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
-                        textHistory.text = "2. Tekan larutan DCPIP dan tiub spesimen 1 ";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP";
+                        textHistory.text = "2. Tarik larutan DCPIP ke tiub spesimen 1 ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
                         {
@@ -1412,8 +1412,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan larutan DCPIP dan tiub spesimen 2";
-                        textHistory.text = "3. Tekan picagari 1ml dan larutan DCPIP";
+                        text.text = "Tarik larutan DCPIP ke tiub spesimen 2";
+                        textHistory.text = "3. Tarik picagari 1ml ke larutan DCPIP";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -1432,8 +1432,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
-                        textHistory.text = "4. Tekan larutan DCPIP dan tiub spesimen 2";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP";
+                        textHistory.text = "4. Tarik larutan DCPIP ke tiub spesimen 2";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
                         {
@@ -1452,8 +1452,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[6 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan larutan DCPIP dan tiub spesimen 3";
-                        textHistory.text = "5. Tekan picagari 1ml dan larutan DCPIP";
+                        text.text = "Tarik larutan DCPIP ke tiub spesimen 3";
+                        textHistory.text = "5. Tarik picagari 1ml ke larutan DCPIP";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -1472,8 +1472,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP";
-                        textHistory.text = "6. Tekan larutan DCPIP dan tiub spesimen 3";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP";
+                        textHistory.text = "6. Tarik larutan DCPIP ke tiub spesimen 3";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide)
                         {
@@ -1492,8 +1492,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan larutan DCPIP dan tiub spesimen 4";
-                        textHistory.text = "7. Tekan picagari 1ml dan larutan DCPIP";
+                        text.text = "Tarik larutan DCPIP ke tiub spesimen 4";
+                        textHistory.text = "7. Tarik picagari 1ml ke larutan DCPIP";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
                         {
@@ -1512,9 +1512,9 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan larutan asid askorbik";
+                        text.text = "Tarik picagari 5ml ke larutan asid askorbik";
 
-                        textHistory.text = "8. Tekan larutan DCPIP dan tiub spesimen 4";
+                        textHistory.text = "8. Tarik larutan DCPIP ke tiub spesimen 4";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide)
                         {
@@ -1533,8 +1533,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 1 ";
-                        textHistory.text = "9. Tekan picagari 5ml dan larutan asid askorbik";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 1 ";
+                        textHistory.text = "9. Tarik picagari 5ml ke larutan asid askorbik";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
                         {
@@ -1553,8 +1553,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan Jus Oren";
-                        textHistory.text = "10. Tekan picagari 5ml dan tiub specimen 1 ";
+                        text.text = "Tarik picagari 5ml ke Jus Oren";
+                        textHistory.text = "10. Tarik picagari 5ml ke tiub specimen 1 ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[8].GetComponent<IsCollided>().isCollide)
                         {
@@ -1573,8 +1573,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[14 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 2 ";
-                        textHistory.text = "13. Tekan picagari 5ml dan Jus Oren";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 2 ";
+                        textHistory.text = "13. Tarik picagari 5ml ke Jus Oren";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -1593,8 +1593,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan Jus Limau Nipis";
-                        textHistory.text = "14. Tekan picagari 5ml dan tiub specimen 2 ";
+                        text.text = "Tarik picagari 5ml ke Jus Limau Nipis";
+                        textHistory.text = "14. Tarik picagari 5ml ke tiub specimen 2 ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
                         {
@@ -1613,8 +1613,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 3 ";
-                        textHistory.text = "17. Tekan picagari 5ml dan Jus Limau Nipis";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 3 ";
+                        textHistory.text = "17. Tarik picagari 5ml ke Jus Limau Nipis";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -1633,8 +1633,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[21 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan jus Lobak Merah";
-                        textHistory.text = "18. Tekan picagari 5ml dan tiub specimen 3 ";
+                        text.text = "Tarik picagari 5ml ke jus Lobak Merah";
+                        textHistory.text = "18. Tarik picagari 5ml ke tiub specimen 3 ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
                         {
@@ -1654,8 +1654,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[22 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 4 ";
-                        textHistory.text = "21. Tekan picagari 5ml dan jus Lobak Merah";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 4 ";
+                        textHistory.text = "21. Tarik picagari 5ml ke jus Lobak Merah";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
                         {
@@ -1674,8 +1674,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[23 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan jus Lobak Merah";
-                        textHistory.text = "22. Tekan picagari 5ml dan tiub specimen 4";
+                        text.text = "Tarik picagari 5ml ke jus Lobak Merah";
+                        textHistory.text = "22. Tarik picagari 5ml ke tiub specimen 4";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
                         {
@@ -1694,8 +1694,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[24 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 4 ";
-                        textHistory.text = "23. Tekan picagari 5ml dan jus Lobak Merah";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 4 ";
+                        textHistory.text = "23. Tarik picagari 5ml ke jus Lobak Merah";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
                         {
@@ -1719,7 +1719,7 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[1 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan bikar A dan bikar berisi ais ";
+                        text.text = "Tarik bikar A ke bikar berisi ais ";
                         if (TouchController2.instance.alat[6].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
                         {
@@ -1738,8 +1738,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[2 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan bikar B dan bikar berisi air pada suhu bilik";
-                        textHistory.text = "1. Tekan bikar A dan bikar berisi ais ";
+                        text.text = "Tarik bikar B ke bikar berisi air pada suhu bilik";
+                        textHistory.text = "1. Tarik bikar A ke bikar berisi ais ";
                         if (TouchController2.instance.alat[7].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[11].GetComponent<IsCollided>().isCollide)
                         {
@@ -1758,8 +1758,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[3 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan bikar C dan bikar air mendidih ";
-                        textHistory.text = "2. Tekan bikar B dan bikar berisi air pada suhu bilik";
+                        text.text = "Tarik bikar C ke bikar air mendidih ";
+                        textHistory.text = "2. Tarik bikar B ke bikar berisi air pada suhu bilik";
                         if (TouchController2.instance.alat[8].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[12].GetComponent<IsCollided>().isCollide)
                         {
@@ -1778,8 +1778,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[4 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tetapkan jam randik pada 30 minit ";
-                        textHistory.text = "3. Tekan bikar C dan bikar air mendidih";
+                        text.text = "Tetapkan jam randik pada 30 minit(tekan jam) ";
+                        textHistory.text = "3. Tarik bikar C ke bikar air mendidih";
                         if (TouchController2.instance.alat[13].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
                             ButtonControllers.instance.buttons[4 - 1].gameObject.SetActive(true);
@@ -1796,8 +1796,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[5 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP. ";
-                        textHistory.text = "4. Tetapkan jam randik pada 30 minit";
+                        text.text = "tarik picagari 1ml ke larutan DCPIP. ";
+                        textHistory.text = "4. Tetapkan jam randik pada 30 minit(tekan jam)";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
                         {
@@ -1816,8 +1816,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[6 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan tiub spesimen 1.  ";
-                        textHistory.text = "5. Tekan picagari 1ml dan larutan DCPIP.";
+                        text.text = "Tarik picagari 1ml ke tiub spesimen 1.  ";
+                        textHistory.text = "5. Tarik picagari 1ml ke larutan DCPIP.";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
                         {
@@ -1836,8 +1836,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[7 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP.  ";
-                        textHistory.text = "6. Tekan picagari 1ml dan tiub spesimen 1. ";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP.  ";
+                        textHistory.text = "6. Tarik picagari 1ml ke tiub spesimen 1. ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
                         {
@@ -1855,8 +1855,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[8 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan tiub spesimen 2  ";
-                        textHistory.text = "7. Tekan picagari 1ml dan larutan DCPIP. ";
+                        text.text = "Tarik picagari 1ml ke tiub spesimen 2  ";
+                        textHistory.text = "7. Tarik picagari 1ml ke larutan DCPIP. ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -1875,8 +1875,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[9 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP.   ";
-                        textHistory.text = "8. Tekan picagari 1ml dan tiub spesimen 2";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP.   ";
+                        textHistory.text = "8. Tarik picagari 1ml ke tiub spesimen 2";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
                         {
@@ -1895,9 +1895,9 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[10 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan tiub spesimen 3 ";
+                        text.text = "Tarik picagari 1ml ke tiub spesimen 3 ";
 
-                        textHistory.text = "9. Tekan picagari 1ml dan larutan DCPIP. ";
+                        textHistory.text = "9. Tarik picagari 1ml ke larutan DCPIP. ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -1916,8 +1916,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[11 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan larutan DCPIP.  ";
-                        textHistory.text = "10. Tekan picagari 1ml dan tiub spesimen 3  ";
+                        text.text = "Tarik picagari 1ml ke larutan DCPIP.  ";
+                        textHistory.text = "10. Tarik picagari 1ml ke tiub spesimen 3  ";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
                         {
@@ -1936,8 +1936,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[12 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 1ml dan tiub spesimen 4.   ";
-                        textHistory.text = "11. Tekan picagari 1ml dan larutan DCPIP.";
+                        text.text = "Tarik picagari 1ml ke tiub spesimen 4.   ";
+                        textHistory.text = "11. Tarik picagari 1ml ke larutan DCPIP.";
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
                         {
@@ -1956,8 +1956,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[13 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan larutan asid askorbik. ";
-                        textHistory.text = "12. Tekan picagari 1ml dan tiub spesimen 4.";
+                        text.text = "Tarik picagari 5ml ke larutan asid askorbik. ";
+                        textHistory.text = "12. Tarik picagari 1ml ke tiub spesimen 4.";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[14].GetComponent<IsCollided>().isCollide)
                         {
@@ -1976,8 +1976,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[14 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 1. ";
-                        textHistory.text = "13. Tekan picagari 5ml dan larutan asid askorbik. ";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 1. ";
+                        textHistory.text = "13. Tarik picagari 5ml ke larutan asid askorbik. ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
                         {
@@ -1996,8 +1996,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[17 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan jus oren dalam Bikar A ";
-                        textHistory.text = "14. Tekan picagari 5ml dan tiub specimen 1. ";
+                        text.text = "Tarik picagari 5ml ke jus oren dalam Bikar A ";
+                        textHistory.text = "14. Tarik picagari 5ml ke tiub specimen 1. ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[10].GetComponent<IsCollided>().isCollide)
                         {
@@ -2016,8 +2016,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 2  ";
-                        textHistory.text = "17. Tekan picagari 5ml dan jus oren dalam Bikar A";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 2  ";
+                        textHistory.text = "17. Tarik picagari 5ml ke jus oren dalam Bikar A";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
@@ -2036,8 +2036,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[21 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan jus oren dalam Bikar B.  ";
-                        textHistory.text = "18. Tekan picagari 5ml dan tiub specimen 2 ";
+                        text.text = "Tarik picagari 5ml ke jus oren dalam Bikar B.  ";
+                        textHistory.text = "18. Tarik picagari 5ml ke tiub specimen 2 ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[11].GetComponent<IsCollided>().isCollide)
                         {
@@ -2056,8 +2056,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[22 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 3  ";
-                        textHistory.text = "21. Tekan picagari 5ml dan jus oren dalam Bikar B. ";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 3  ";
+                        textHistory.text = "21. Tarik picagari 5ml ke jus oren dalam Bikar B. ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide)
                         {
@@ -2076,8 +2076,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[25 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan jus oren dalam bikar C. ";
-                        textHistory.text = "22. Tekan picagari 5ml dan tiub specimen 3  ";
+                        text.text = "Tarik picagari 5ml ke jus oren dalam bikar C. ";
+                        textHistory.text = "22. Tarik picagari 5ml ke tiub specimen 3  ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[12].GetComponent<IsCollided>().isCollide)
                         {
@@ -2096,8 +2096,8 @@ public class ObjectController2 : MonoBehaviour
                 {
                     if (bstepsController.instance.bsteps[26 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstepsController.instance.bsteps[1 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        text.text = "Tekan picagari 5ml dan tiub specimen 4. ";
-                        textHistory.text = "25. Tekan picagari 5ml dan jus oren dalam bikar C.  ";
+                        text.text = "Tarik picagari 5ml ke tiub specimen 4. ";
+                        textHistory.text = "25. Tarik picagari 5ml ke jus oren dalam bikar C.  ";
                         if (TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[2].GetComponent<IsCollided>().isCollide)
                         {

@@ -162,7 +162,7 @@ public class ObjectController : MonoBehaviour
                 if (bstep1.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep1.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
                     Debug.Log(touch.Barangs[0]);
-                    text.text = "Tekan bikar ampaian kanji 1% dan silinder penyukat  ";
+                    text.text = "Tarik bikar ampaian kanji 1% ke silinder penyukat  ";
                     if (touch.Barangs[0].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[1].GetComponent<IsCollided>().isCollide)
                     {
@@ -182,8 +182,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep2.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep2.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan silinder penyukat dan tabung uji A yang terletak pada rak tabung uji ";
-                    textHistory.text = "1. Tekan bikar ampaian kanji 1% dan silinder penyukat ";
+                    text.text = "Tarik silinder penyukat ke tabung uji A yang terletak pada rak tabung uji ";
+                    textHistory.text = "1. Tarik bikar ampaian kanji 1% ke silinder penyukat ";
                     if (touch.Barangs[1].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[2].GetComponent<IsCollided>().isCollide)
                     {
@@ -203,8 +203,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep3.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep3.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = " Tekan bikar ampaian kanji 1% dan silinder penyukat";
-                    textHistory.text = "2. Tekan silinder penyukat dan tabung uji A yang terletak pada rak tabung uji";
+                    text.text = " Tarik bikar ampaian kanji 1% ke silinder penyukat";
+                    textHistory.text = "2. Tarik silinder penyukat ke tabung uji A yang terletak pada rak tabung uji";
                     if (touch.Barangs[0].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[1].GetComponent<IsCollided>().isCollide)
                     {
@@ -225,8 +225,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep4.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep4.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "  Tekan silinder penyukat dan tabung uji B yang terletak pada rak tabung uji   ";
-                    textHistory.text = "3. Tekan bikar ampaian kanji 1% dan silinder penyukat";
+                    text.text = "  Tarik silinder penyukat ke tabung uji B yang terletak pada rak tabung uji   ";
+                    textHistory.text = "3. Tarik bikar ampaian kanji 1% ke silinder penyukat";
                     if (touch.Barangs[1].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[3].GetComponent<IsCollided>().isCollide)
                     {
@@ -247,8 +247,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep5.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep5.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan bikar larutan enzim amilase 0.5% dan silinder penyukat (3ml). ";
-                    textHistory.text = "4. Tekan silinder penyukat dan tabung uji B yang terletak pada rak tabung uji  ";
+                    text.text = "Tarik bikar larutan enzim amilase 0.5% ke silinder penyukat (3ml). ";
+                    textHistory.text = "4. Tarik silinder penyukat ke tabung uji B yang terletak pada rak tabung uji  ";
                     if (touch.Barangs[1].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[4].GetComponent<IsCollided>().isCollide)
                     {
@@ -269,8 +269,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep6.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep6.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan silinder penyukat dan tabung uji A. ";
-                    textHistory.text = "5. Tekan bikar larutan enzim amilase 0.5% dan silinder penyukat (3ml). ";
+                    text.text = "Tarik silinder penyukat ke tabung uji A. ";
+                    textHistory.text = "5. Tarik bikar larutan enzim amilase 0.5% ke silinder penyukat (3ml). ";
                     if (touch.Barangs[1].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[2].GetComponent<IsCollided>().isCollide)
                     {
@@ -291,8 +291,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep7.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep7.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan botol air suling dan silinder penyukat (3ml).    ";
-                    textHistory.text = "6. Tekan silinder penyukat dan tabung uji A. ";
+                    text.text = "Tarik botol air suling ke silinder penyukat (3ml).    ";
+                    textHistory.text = "6. Tarik silinder penyukat ke tabung uji A. ";
                     if (touch.Barangs[1].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[5].GetComponent<IsCollided>().isCollide)
                     {
@@ -313,8 +313,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep8.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep8.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan silinder penyukat dan tabung uji B. ";
-                    textHistory.text = "7. Tekan botol air suling dan silinder penyukat (3ml).    ";
+                    text.text = "Tarik silinder penyukat ke tabung uji B. ";
+                    textHistory.text = "7. Tarik botol air suling ke silinder penyukat (3ml).    ";
                     if (touch.Barangs[1].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[3].GetComponent<IsCollided>().isCollide)
                     {
@@ -337,7 +337,7 @@ public class ObjectController : MonoBehaviour
                 if (bstep9.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep9.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
                     text.text = "Klik penunu Bunsen untuk panaskan    ";
-                    textHistory.text = "8. Tekan silinder penyukat dan tabung uji B.";
+                    textHistory.text = "8. Tarik silinder penyukat ke tabung uji B.";
                     if (
                     touch.Barangs[6].GetChild(0).GetComponent<SelectedController>().isToggle)
                     {
@@ -404,8 +404,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep16.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep16.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan penitis dan tabung uji baru C di lubang ketiga";
-                    textHistory.text = "15. Tarik penitis dan tabung uji A ";
+                    text.text = "Tarik penitis ke tabung uji baru C di lubang ketiga";
+                    textHistory.text = "15. Tarik penitis ke tabung uji A ";
 
                     //A B pengukus air dengan jam
                     if (touch.Barangs[9].GetComponent<IsCollided>().isCollide &&
@@ -429,8 +429,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep17.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep17.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan penutup botol larutan Benedict dan tabung uji C (lubang ketiga) untuk titiskan 3 titis ";
-                    textHistory.text = "16. Tekan penitis dan tabung uji baru C di lubang ketiga ";
+                    text.text = "Tarik penutup botol larutan Benedict ke tabung uji C (lubang ketiga) untuk titiskan 3 titis ";
+                    textHistory.text = "16. Tarik penitis ke tabung uji baru C di lubang ketiga ";
                     //A B pengukus air dengan jam
                     if (touch.Barangs[9].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[10].GetComponent<IsCollided>().isCollide)
@@ -451,7 +451,7 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep18_20.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep18_20.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan Tabung uji C (warna biru) masuk dan dalam kukus air,\n Jam randik pusing 1 minit, \n    ";
+                    text.text = "Tekan Tabung uji C (warna biru) \n tekan kukus air,\n tekan Jam randik pusing 1 minit, \n    ";
                     textHistory.text = "18-20. Tekan penutup botol larutan Benedict dan tabung uji C (lubang ketiga) untuk titiskan 3 titis ";
                     //C pengukus air dengan jam
                     if (touch.Barangs[8].GetChild(0).GetComponent<SelectedController>().isToggle &&
@@ -475,8 +475,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep21.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep21.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan penitis pada botol iodin dan tabung uji A.     ";
-                    textHistory.text = "18-20. Tekan Tabung uji C (warna biru) masuk dan dalam kukus air,\n Jam randik pusing 1 minit, \n    ";
+                    text.text = "Tarik penitis dari botol iodin ke tabung uji A.     ";
+                    textHistory.text = "18-20. Tekan penutup botol larutan Benedict dan tabung uji C (lubang ketiga) untuk titiskan 3 titis ";
                     //C pengukus air dengan jam
                     if (touch.Barangs[2].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[9].GetComponent<IsCollided>().isCollide)
@@ -498,8 +498,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep22_23.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep22_23.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan penitis dan tabung uji B, \n Tekan penitis dan tabung uji baru (D) lubang keempat";
-                    textHistory.text = "21. Tekan penitis pada botol iodin dan tabung uji A.    ";
+                    text.text = "Tarik penitis ke tabung uji B, \n Tekan penitis dan tabung uji baru (D) lubang keempat";
+                    textHistory.text = "21. Tarik penitis dari botol iodin ke tabung uji A.    ";
                     //C pengukus air dengan jam
                     if (touch.Barangs[3].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[9].GetComponent<IsCollided>().isCollide)
@@ -520,8 +520,8 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep24.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep24.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan penutup botol larutan Benedict dan tabung uji D untuk titiskan 3 TITIS Larutan Benedict. ";
-                    textHistory.text = "22-23. Tekan penitis dan tabung uji B, \n Tekan penitis dan tabung uji baru (D) lubang keempat ";
+                    text.text = "Tarik penutup botol larutan Benedict ke tabung uji D untuk titiskan 3 TITIS Larutan Benedict. ";
+                    textHistory.text = "22-23. Tarik penitis ke tabung uji B, \n Tarik penitis ke tabung uji baru (D) lubang keempat ";
                     //C pengukus air dengan jam
                     if (touch.Barangs[13].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[9].GetComponent<IsCollided>().isCollide)
@@ -565,7 +565,7 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep27.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep27.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan penitis pada botol iodin dan tabung uji B";
+                    text.text = "Tarik penitis pada botol iodin ke tabung uji B";
                     textHistory.text = "25-26. Tekan Tabung uji D (warna biru) dan kukus air, \n Tekan Jam randik ";
                     //C pengukus air dengan jam
                     if (
