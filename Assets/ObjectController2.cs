@@ -1193,9 +1193,9 @@ public class ObjectController2 : MonoBehaviour
                     {
                         text.text = "Tekan jarum yang ada plastisin dan kacang gajus dan juga penunu bunsen ";
                         textHistory.text = "10. Klik penunu Bunsen";
-                        if (TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
-                        TouchController2.instance.alat[7].GetComponent<SelectedController>().isSelected
-                        && TouchController2.instance.alat[2].GetComponent<SelectedController>().isSelected)
+                        if (TouchController2.instance.alat[5].GetChild(0).GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[7].GetChild(0).GetComponent<SelectedController>().isSelected
+                        && TouchController2.instance.alat[2].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
                             ButtonControllers.instance.buttons[11 - 1].gameObject.SetActive(true);
 
@@ -1417,7 +1417,7 @@ public class ObjectController2 : MonoBehaviour
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[4].GetComponent<IsCollided>().isCollide)
                         {
-                            anim.Play("step5");
+                            anim.Play("step4");
                             StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 4));
 
                         }

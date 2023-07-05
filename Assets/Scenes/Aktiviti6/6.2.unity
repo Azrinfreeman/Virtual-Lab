@@ -36548,7 +36548,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Larutan DCPIP\r\nWarna biru\r"
+  m_text: "Larutan DCPIP\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -46416,7 +46416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000006370838}
+  m_AnchoredPosition: {x: 498, y: 0.0000006370838}
   m_SizeDelta: {x: 896.9684, y: 867.7524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977466223
@@ -60845,7 +60845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1345068040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60920,7 +60920,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: bstep1
+          m_StringArgument: step12
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1345068042

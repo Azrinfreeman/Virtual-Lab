@@ -37,6 +37,16 @@ public class KuizController : MonoBehaviour
         }
         
     }
+    public void checkAnswers5Q(){
+        //count soalan
+        
+        for(int i = 0; i < transform.childCount; i++){
+            if(soalanAnswer[i]){
+                scores +=2;
+            }
+        }
+        
+    }
 
     // Update is called once per frame
     void Update()

@@ -132,6 +132,32 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
 
         }
+        else if (SceneManager.GetActiveScene().name == "5.4")
+        {
+
+            if (!slotInsertedAudio.isPlaying)
+            {
+                slotInsertedAudio.Play();
+            }//set pivot 
+            if (eventData.pointerDrag.tag == "tempButton1")
+            {
+                eventData.pointerDrag.tag = "button1";
+            }
+            else if (eventData.pointerDrag.tag == "tempButton2")
+            {
+                eventData.pointerDrag.tag = "button2";
+            }
+            else if (eventData.pointerDrag.tag == "tempButton3")
+            {
+                eventData.pointerDrag.tag = "button3";
+            }
+            else if (eventData.pointerDrag.tag == "tempButton4")
+            {
+                eventData.pointerDrag.tag = "button4";
+            }
+            answerStore = eventData.pointerDrag.GetComponent<DragScript>().Answer;
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+        }
         else if (SceneManager.GetActiveScene().name == "8.1")
         {
             //set pivot 
