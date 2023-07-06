@@ -4594,6 +4594,125 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98600655}
   m_CullTransparentMesh: 1
+--- !u!1001 &99528120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2094072471}
+    m_Modifications:
+    - target: {fileID: 336871690176822131, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_Name
+      value: thermometerParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0022895802
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.003001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.60888004
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.60888016
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3595344
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3595345
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 28.878
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f42f5a91f6f683b4aa83db5674b0142f, type: 3}
+--- !u!4 &99528121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+    type: 3}
+  m_PrefabInstance: {fileID: 99528120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100369546
 GameObject:
   m_ObjectHideFlags: 0
@@ -10410,7 +10529,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228712473}
-  m_LocalRotation: {x: -0.031955983, y: 0.37943158, z: 0.031955976, w: 0.92411536}
+  m_LocalRotation: {x: -0.031955987, y: 0.3794316, z: 0.03195598, w: 0.9241154}
   m_LocalPosition: {x: 0.0028714412, y: 0.10609488, z: -0.62634283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24391,8 +24510,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik penitis (yang ada warna pink) ke tabung uji B untuk menitiskan 3
-    TITIS larutan fenolftelin ke dalam tabung uji B
+  m_text: Tarik penitis (berisi larutan warna pink) ke tabung uji B untuk menitiskan
+    3 TITIS larutan fenolftelin ke dalam tabung uji B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -66676,8 +66795,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik penitis (yang ada warna pink) ke tabung uji B untuk menitiskan 3
-    TITIS larutan fenolftelin ke dalam tabung uji B
+  m_text: Tarik penitis (berisi larutan warna pink) ke tabung uji B untuk menitiskan
+    3 TITIS larutan fenolftelin ke dalam tabung uji B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -88447,8 +88566,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Klik jam randik. Jam randik akan berpusing ke 5 minit. Pada 5 minit, warna
-    merah jambu dalam tabung uji A akan luntur '
+  m_text: 'Klik pada jam randik. Rekod masa yang diambil untuk larutan merah jambut
+    menjadi tidak berwarna. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -98829,6 +98948,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fb329677cd3c84459ced62d15334096,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 99528121}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fb329677cd3c84459ced62d15334096,
         type: 3}
       insertIndex: -1

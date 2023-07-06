@@ -3749,7 +3749,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: bstep2
+          m_StringArgument: bstep20
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &117116716
@@ -17887,6 +17887,125 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585640885}
   m_CullTransparentMesh: 1
+--- !u!1001 &588284299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 100598563}
+    m_Modifications:
+    - target: {fileID: 336871690176822131, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_Name
+      value: thermometerParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0021671758
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00309
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364825753623100668, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08886737
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08886737
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08886737
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0369
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5069324
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5069324
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4929702
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4929702
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f42f5a91f6f683b4aa83db5674b0142f, type: 3}
+--- !u!4 &588284300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9107192135086170615, guid: f42f5a91f6f683b4aa83db5674b0142f,
+    type: 3}
+  m_PrefabInstance: {fileID: 588284299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589097805
 GameObject:
   m_ObjectHideFlags: 0
@@ -65093,7 +65212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jam randik pusing 20 minit
+  m_text: Tekan jam randik untuk tetapkan masa 20 minit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -79022,7 +79141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jam randik pusing 20 minit
+  m_text: Tekan jam randik untuk tetapkan masa 20 minit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -88446,6 +88565,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fb329677cd3c84459ced62d15334096,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 588284300}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fb329677cd3c84459ced62d15334096,
         type: 3}
       insertIndex: -1
