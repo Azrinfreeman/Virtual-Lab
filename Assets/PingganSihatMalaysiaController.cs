@@ -25,6 +25,7 @@ public class PingganSihatMalaysiaController : MonoBehaviour
                 Debug.Log("correct");
                 winAndFail[3].gameObject.SetActive(true);
                 winAndFail[2].gameObject.SetActive(false);
+                PlayerPrefs.SetInt("pernahjawab",1);
             }else{
                 Debug.Log("wrong");
                 
