@@ -1234,7 +1234,7 @@ public class ObjectController2 : MonoBehaviour
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[1].GetComponent<IsCollided>().isCollide)
                         {
-                            anim.Play("step13");
+                            anim.Play("step17");
                             StartCoroutine(TrueAndFalseWithTimeTwo(2f, 0, 1));
 
                         }

@@ -11,6 +11,7 @@ public class DragController : MonoBehaviour
 
     public bool isW;
     public bool isStop;
+    public bool isStep2;
 
     void OnMouseDown()
     {
@@ -69,740 +70,748 @@ public class DragController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (ObjectController.instance.Eksperimen == 2)
+        if (isStep2)
         {
-            //step1
-            if (gameObject.name == "BikarAmpaianKanjiParent" && other.gameObject.name == "SilinderPenyukatParent")
+            if (ObjectController.instance.Eksperimen == 2)
             {
+                //step1
+                if (gameObject.name == "BikarAmpaianKanjiParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
+                }
+                //step2
+                if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step3
+                if (gameObject.name == "BikarAmpaianKanjiParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step4
+                if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step5
+                if (gameObject.name == "BikarAmilaseParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step6
+                if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step7
+                if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step8
+                if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step15
+                if (gameObject.name == "AParent" && other.gameObject.name == "penitisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step16
+                if (gameObject.name == "CParent" && other.gameObject.name == "penitisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step17
+                if (gameObject.name == "CParent" && other.gameObject.name == "penitisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step21
+                if (gameObject.name == "AParent" && other.gameObject.name == "penitisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step22-23
+                if (gameObject.name == "BParent" && other.gameObject.name == "penitisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step24
+                if (gameObject.name == "DParent" && other.gameObject.name == "penitisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
             }
-            //step2
-            if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
+
+        }
+        else
+        {
+            if (ObjectController2.instance.Eksperimen == 3)
             {
+                //step1
+                if (gameObject.name == "BeakerAmpaianAlbumenParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                }
+                //step2
+                if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+                }
 
+                //step3
+                if (gameObject.name == "BeakerAsidHidroParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+
+                //step4
+                if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+                    Debug.Log("A Parent");
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step6
+                if (gameObject.name == "BeakerLarutanPepsinParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+                    Debug.Log("A Parent");
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step7
+                if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+                    Debug.Log("A Parent");
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step9
+                if (gameObject.name == "BeakerAmpaianAlbumenParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step10
+                if (gameObject.name == "SilinderPenyukatParent" && other.gameObject.name == "BParent")
+                {
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step11
+                if (gameObject.name == "BeakerAsidHidroParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step12
+                if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+
+                //step14
+                if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+
+                //step15
+                if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step18
+                if (gameObject.name == "AParent" && other.gameObject.name == "beakerParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step19
+                if (gameObject.name == "BParent" && other.gameObject.name == "beakerParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
             }
-            //step3
-            if (gameObject.name == "BikarAmpaianKanjiParent" && other.gameObject.name == "SilinderPenyukatParent")
+            else if (ObjectController2.instance.Eksperimen == 4)
             {
+                //step1
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "BeakerMinyakParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step4
-            if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
+                }//step2
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step5
-            if (gameObject.name == "BikarAmilaseParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
+                }
+                //step3
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "LarutanNAParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step6
-            if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
+                }
+                //step4
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
+                }
+                //step5
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "PencuciPingganParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step6
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step9
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step10
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "BParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step11
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "LarutanNAParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step12
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "BParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step13
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "PencuciPingganParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step14
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "BParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step17
+                if (gameObject.name == "penitisParent" && other.gameObject.name == "LarutanFenolftelinParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step18
+                if (gameObject.name == "penitisParent" && other.gameObject.name == "AParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step19
+                if (gameObject.name == "penitisParent" && other.gameObject.name == "LarutanFenolftelinParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step20
+                if (gameObject.name == "penitisParent" && other.gameObject.name == "BParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+
+                //step21
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "EnzimLipaseParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step22
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step23
+                if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "BParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step25
+                if (gameObject.name == "beakerParent" && other.gameObject.name == "AParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step26
+                if (gameObject.name == "beakerParent" && other.gameObject.name == "BParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
             }
-            //step7
-            if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
+            else if (ObjectController2.instance.Eksperimen == 5)
             {
+                //step1
+                if (gameObject.name == "gajusParent" && other.gameObject.name == "weightParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step8
-            if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
+                }
+                //step3
+                if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step4
+                if (gameObject.name == "ClampParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step9
+                if (gameObject.name == "gajusParent" && other.gameObject.name == "plasticinParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step13
+                if (gameObject.name == "gajusParent" && other.gameObject.name == "plasticinParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step17
+                if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step18
+                if (gameObject.name == "ClampParent" && other.gameObject.name == "SilinderPenyukatParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step23
+                if (gameObject.name == "weightParent" && other.gameObject.name == "peanutParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step25
+                if (gameObject.name == "plasticinParent" && other.gameObject.name == "peanutParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+            }
+            else if (ObjectController2.instance.Eksperimen == 6)
             {
+                //step1
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step15
-            if (gameObject.name == "AParent" && other.gameObject.name == "penitisParent")
+                }//step2
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen1Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step3
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step4
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen2Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step5
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step6
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen3Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step7
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step8
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen4Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step9
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "AsidAskorbikParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step10
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen1Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step13
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusOrenParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step14
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen2Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step17
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusLimauNipisParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step18
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen3Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step21
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusLobakMerahParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step22
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen4Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+                //step23
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusLobakMerahParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step24
+                if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen4Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
+            }
+            else if (ObjectController2.instance.Eksperimen == 7)
             {
+                //step1
+                if (gameObject.name == "BikarAParent" && other.gameObject.name == "BikarAisParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step16
-            if (gameObject.name == "CParent" && other.gameObject.name == "penitisParent")
-            {
+                }
+                //step2
+                if (gameObject.name == "BikarBParent" && other.gameObject.name == "BikarAirParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step17
-            if (gameObject.name == "CParent" && other.gameObject.name == "penitisParent")
-            {
+                }//step3
+                if (gameObject.name == "BikarCParent" && other.gameObject.name == "BikarAirPanasParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step21
-            if (gameObject.name == "AParent" && other.gameObject.name == "penitisParent")
-            {
+                }//step5
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step22-23
-            if (gameObject.name == "BParent" && other.gameObject.name == "penitisParent")
-            {
+                }//step6
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen1Parent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
-            }//step24
-            if (gameObject.name == "DParent" && other.gameObject.name == "penitisParent")
-            {
+                }//step7
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
 
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
 
+                }//step8
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen2Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step9
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step10
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen3Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step11
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step12
+                if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen4Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step13
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "AsidAskorbikParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step14
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen1Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step17
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "BikarAParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step18
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen2Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step21
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "BikarBParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step22
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen3Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step25
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "BikarCParent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }//step26
+                if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen4Parent")
+                {
+
+                    other.gameObject.GetComponent<IsCollided>().isCollide = true;
+                    gameObject.GetComponent<IsCollided>().isCollide = true;
+
+                }
             }
         }
 
-        if (ObjectController2.instance.Eksperimen == 3)
-        {
-            //step1
-            if (gameObject.name == "BeakerAmpaianAlbumenParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step2
-            if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-            }
-
-            //step3
-            if (gameObject.name == "BeakerAsidHidroParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-
-            //step4
-            if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-                Debug.Log("A Parent");
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step6
-            if (gameObject.name == "BeakerLarutanPepsinParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-                Debug.Log("A Parent");
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step7
-            if (gameObject.name == "AParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-                Debug.Log("A Parent");
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step9
-            if (gameObject.name == "BeakerAmpaianAlbumenParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step10
-            if (gameObject.name == "SilinderPenyukatParent" && other.gameObject.name == "BParent")
-            {
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step11
-            if (gameObject.name == "BeakerAsidHidroParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step12
-            if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-
-            //step14
-            if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-
-            //step15
-            if (gameObject.name == "BParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step18
-            if (gameObject.name == "AParent" && other.gameObject.name == "beakerParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step19
-            if (gameObject.name == "BParent" && other.gameObject.name == "beakerParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-        }
-        else if (ObjectController2.instance.Eksperimen == 4)
-        {
-            //step1
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "BeakerMinyakParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step2
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step3
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "LarutanNAParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step4
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step5
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "PencuciPingganParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step6
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step9
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step10
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "BParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step11
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "LarutanNAParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step12
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "BParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step13
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "PencuciPingganParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step14
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "BParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step17
-            if (gameObject.name == "penitisParent" && other.gameObject.name == "LarutanFenolftelinParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step18
-            if (gameObject.name == "penitisParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step19
-            if (gameObject.name == "penitisParent" && other.gameObject.name == "LarutanFenolftelinParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step20
-            if (gameObject.name == "penitisParent" && other.gameObject.name == "BParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-
-            //step21
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "EnzimLipaseParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step22
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step23
-            if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "BParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step25
-            if (gameObject.name == "beakerParent" && other.gameObject.name == "AParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step26
-            if (gameObject.name == "beakerParent" && other.gameObject.name == "BParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-        }
-
-        else if (ObjectController2.instance.Eksperimen == 5)
-        {
-            //step1
-            if (gameObject.name == "gajusParent" && other.gameObject.name == "weightParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step3
-            if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step4
-            if (gameObject.name == "ClampParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step9
-            if (gameObject.name == "gajusParent" && other.gameObject.name == "plasticinParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step13
-            if (gameObject.name == "gajusParent" && other.gameObject.name == "plasticinParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step17
-            if (gameObject.name == "botolAirSulingParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step18
-            if (gameObject.name == "ClampParent" && other.gameObject.name == "SilinderPenyukatParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step23
-            if (gameObject.name == "weightParent" && other.gameObject.name == "peanutParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step25
-            if (gameObject.name == "plasticinParent" && other.gameObject.name == "peanutParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-        }
-        else if (ObjectController2.instance.Eksperimen == 6)
-        {
-            //step1
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step2
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen1Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step3
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step4
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen2Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step5
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step6
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen3Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step7
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step8
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen4Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step9
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "AsidAskorbikParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step10
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen1Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step13
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusOrenParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step14
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen2Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step17
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusLimauNipisParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step18
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen3Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step21
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusLobakMerahParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step22
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen4Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step23
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "JusLobakMerahParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step24
-            if (gameObject.name == "SyringeJarumParent" && other.gameObject.name == "TiubSpecimen4Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-        }
-        else if (ObjectController2.instance.Eksperimen == 7)
-        {
-            //step1
-            if (gameObject.name == "BikarAParent" && other.gameObject.name == "BikarAisParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-            //step2
-            if (gameObject.name == "BikarBParent" && other.gameObject.name == "BikarAirParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step3
-            if (gameObject.name == "BikarCParent" && other.gameObject.name == "BikarAirPanasParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step5
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step6
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen1Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step7
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step8
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen2Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step9
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step10
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen3Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step11
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "DCPIPParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step12
-            if (gameObject.name == "SyringeParent" && other.gameObject.name == "TiubSpecimen4Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step13
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "AsidAskorbikParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step14
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen1Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step17
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "BikarAParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step18
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen2Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step21
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "BikarBParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step22
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen3Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step25
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "BikarCParent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }//step26
-            if (gameObject.name == "SyringejarumParent" && other.gameObject.name == "TiubSpecimen4Parent")
-            {
-
-                other.gameObject.GetComponent<IsCollided>().isCollide = true;
-                gameObject.GetComponent<IsCollided>().isCollide = true;
-
-            }
-        }
     }
 
     private void OnCollisionExit(Collision other)
-    {
+    {if(isStep2){
+
+    }
         if (ObjectController.instance.Eksperimen == 2)
         {
             //step1

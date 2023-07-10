@@ -24510,8 +24510,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik penitis (berisi larutan warna pink) ke tabung uji B untuk menitiskan
-    3 TITIS larutan fenolftelin ke dalam tabung uji B
+  m_text: Tarik penitis (berisi larutan warna merah jambu) ke tabung uji B untuk
+    menitiskan 3 titis larutan fenolftelin ke dalam tabung uji B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -27798,6 +27798,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!4 &431683742
 Transform:
   m_ObjectHideFlags: 0
@@ -29479,6 +29480,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!114 &500720934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31526,6 +31528,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!65 &571060309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32806,6 +32809,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!114 &594231732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39338,7 +39342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &760530574
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39781,6 +39785,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!65 &769869351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41158,6 +41163,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!114 &788698291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66334,6 +66340,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!114 &864852416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66795,8 +66802,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik penitis (berisi larutan warna pink) ke tabung uji B untuk menitiskan
-    3 TITIS larutan fenolftelin ke dalam tabung uji B
+  m_text: Tarik penitis (berisi larutan warna merah jambu) ke tabung uji B untuk
+    menitiskan 3 titis larutan fenolftelin ke dalam tabung uji B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -84593,6 +84600,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!65 &1270047194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94875,7 +94883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1561095037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -96395,6 +96403,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!65 &1609389237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105318,7 +105327,8 @@ MonoBehaviour:
   screenPoint: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   isW: 0
-  isStop: 0
+  isStop: 1
+  isStep2: 0
 --- !u!1 &1852335483
 GameObject:
   m_ObjectHideFlags: 0
@@ -109279,6 +109289,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!114 &1978003873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109722,6 +109733,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!65 &1994436208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110402,6 +110414,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!114 &2008326800
 MonoBehaviour:
   m_ObjectHideFlags: 0
