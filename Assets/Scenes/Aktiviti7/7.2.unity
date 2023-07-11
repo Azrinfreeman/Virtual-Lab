@@ -9698,6 +9698,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &263548395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37361,6 +37362,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &778895316
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41940,6 +41942,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &907463742
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43110,7 +43113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &933354681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43525,6 +43528,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &940104147
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53407,6 +53411,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!1 &1119259634
 GameObject:
   m_ObjectHideFlags: 0
@@ -55446,6 +55451,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!54 &1163317573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -61368,6 +61374,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &1305693685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69614,6 +69621,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!1 &1481788812
 GameObject:
   m_ObjectHideFlags: 0
@@ -70249,6 +70257,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &1494437703
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -73846,6 +73855,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &1576177085
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78004,6 +78014,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!54 &1658736598
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78117,6 +78128,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!54 &1660153215
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85080,6 +85092,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 0
+  isStep2: 0
 --- !u!1001 &1846389639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88052,7 +88065,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 2.0
+          m_StringArgument: 7.0
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1910393900
@@ -91573,6 +91586,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!54 &1974689227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -94184,6 +94198,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   isW: 0
   isStop: 1
+  isStep2: 0
 --- !u!54 &2063137084
 Rigidbody:
   m_ObjectHideFlags: 0
