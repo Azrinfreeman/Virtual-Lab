@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 4.79, y: 0.1, z: 0}
+        value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -51,7 +51,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.257, y: -174.991, z: 180.131}
+        value: {x: 0.257, y: -192.323, z: 180.131}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -148,7 +148,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -26.8, y: 24.6, z: 41.8}
+        value: {x: -26.2, y: 22.6, z: 44.2}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1160,7 +1160,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -26.8
+        value: -26.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1181,7 +1181,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 24.6
+        value: 22.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1202,7 +1202,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 41.8
+        value: 44.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1223,7 +1223,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 4.79
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1244,7 +1244,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.1
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1964,7 +1964,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -174.991
+        value: -192.323
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3038,7 +3038,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Main Camera
+    path: CanvasWorld/Alatan/TiubSpecimen3Parent/TiubSpecimen3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3050,7 +3050,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Main Camera
+    path: CanvasWorld/Alatan/TiubSpecimen3Parent/TiubSpecimen3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3062,7 +3062,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Main Camera
+    path: CanvasWorld/Alatan/TiubSpecimen3Parent/TiubSpecimen3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3182,7 +3182,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: CanvasWorld/Alatan/SyringejarumParent/Syringejarum
+    path: Main Camera
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3194,7 +3194,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: CanvasWorld/Alatan/SyringejarumParent/Syringejarum
+    path: Main Camera
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3206,7 +3206,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: CanvasWorld/Alatan/SyringejarumParent/Syringejarum
+    path: Main Camera
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3290,7 +3290,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: CanvasWorld/Alatan/TiubSpecimen3Parent/TiubSpecimen3
+    path: CanvasWorld/Alatan/SyringejarumParent/Syringejarum
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3302,7 +3302,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: CanvasWorld/Alatan/TiubSpecimen3Parent/TiubSpecimen3
+    path: CanvasWorld/Alatan/SyringejarumParent/Syringejarum
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3314,7 +3314,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: CanvasWorld/Alatan/TiubSpecimen3Parent/TiubSpecimen3
+    path: CanvasWorld/Alatan/SyringejarumParent/Syringejarum
     classID: 4
     script: {fileID: 0}
     flags: 0

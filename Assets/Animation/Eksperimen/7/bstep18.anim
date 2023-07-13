@@ -67,7 +67,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 4.023, y: -84.446, z: 0}
+        value: {x: 0, y: 3.902, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -83,7 +83,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 1.678, y: -84.446, z: 0}
+        value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -244,7 +244,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -984.1, y: -518.05145, z: 47.76665}
+        value: {x: -983.29, y: -515.43, z: 46.36}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1700,7 +1700,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -984.1
+        value: -983.29
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1721,7 +1721,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -518.05145
+        value: -515.43
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1742,7 +1742,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 47.76665
+        value: 46.36
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2246,7 +2246,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 4.023
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2267,7 +2267,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -84.446
+        value: 3.902
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2414,7 +2414,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.678
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2435,7 +2435,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -84.446
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2852,7 +2852,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: CanvasWorld/Alatan/TiubSpecimen2Parent
+    path: CanvasWorld/Alatan/TiubSpecimen1Parent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2864,7 +2864,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: CanvasWorld/Alatan/TiubSpecimen2Parent
+    path: CanvasWorld/Alatan/TiubSpecimen1Parent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2876,7 +2876,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: CanvasWorld/Alatan/TiubSpecimen2Parent
+    path: CanvasWorld/Alatan/TiubSpecimen1Parent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2960,7 +2960,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: CanvasWorld/Alatan/TiubSpecimen1Parent
+    path: CanvasWorld/Alatan/SyringeParent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2972,7 +2972,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: CanvasWorld/Alatan/TiubSpecimen1Parent
+    path: CanvasWorld/Alatan/SyringeParent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2984,7 +2984,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: CanvasWorld/Alatan/TiubSpecimen1Parent
+    path: CanvasWorld/Alatan/SyringeParent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3068,7 +3068,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: CanvasWorld/Alatan/SyringeParent
+    path: CanvasWorld/Alatan/TiubSpecimen2Parent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3080,7 +3080,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: CanvasWorld/Alatan/SyringeParent
+    path: CanvasWorld/Alatan/TiubSpecimen2Parent
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3092,7 +3092,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: CanvasWorld/Alatan/SyringeParent
+    path: CanvasWorld/Alatan/TiubSpecimen2Parent
     classID: 4
     script: {fileID: 0}
     flags: 0
