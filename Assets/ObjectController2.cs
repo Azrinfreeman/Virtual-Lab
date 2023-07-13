@@ -1818,6 +1818,7 @@ public class ObjectController2 : MonoBehaviour
                     {
                         text.text = "Tarik picagari 1ml ke tiub spesimen 1.  ";
                         textHistory.text = "5. Tarik picagari 1ml ke larutan DCPIP.";
+                        Debug.Log("bstep6 now");
                         if (TouchController2.instance.alat[0].GetComponent<IsCollided>().isCollide &&
                         TouchController2.instance.alat[5].GetComponent<IsCollided>().isCollide)
                         {
