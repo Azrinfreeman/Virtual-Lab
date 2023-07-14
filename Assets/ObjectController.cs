@@ -357,7 +357,7 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep10_12.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep10_12.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    text.text = "Tekan tabung uji A \n Tekan tabung uji B dan juga pengukus air \n  Tetapkan jam randik pada 10 min. (murid tekan jam) ";
+                    text.text = "Tekan tabung uji A \n Tekan tabung uji B dan juga pengukus air \n  Tetapkan jam randik pada 10 min. (tekan jam) ";
 
                     textHistory.text = "9.Klik penunu Bunsen untuk panaskan ";
                     //A B pengukus air dengan jam
