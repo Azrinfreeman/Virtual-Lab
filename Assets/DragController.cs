@@ -13,8 +13,13 @@ public class DragController : MonoBehaviour
     public bool isStop;
     public bool isStep2;
 
+
+
     void OnMouseDown()
     {
+      //  Cursors.instance.cursors[0].gameObject.SetActive(true);
+
+      //  Cursors.instance.cursors[1].gameObject.SetActive(false);
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
@@ -23,6 +28,7 @@ public class DragController : MonoBehaviour
     {
         if (!isStop)
         {
+
             Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
 
@@ -37,6 +43,13 @@ public class DragController : MonoBehaviour
             }
         }
 
+    }
+
+    void OnMouseUp()
+    {
+       // Cursors.instance.cursors[0].gameObject.SetActive(false);
+
+       // Cursors.instance.cursors[1].gameObject.SetActive(true);
     }
 
     void Update()
@@ -70,6 +83,7 @@ public class DragController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+
         if (isStep2)
         {
             if (ObjectController.instance.Eksperimen == 2)
