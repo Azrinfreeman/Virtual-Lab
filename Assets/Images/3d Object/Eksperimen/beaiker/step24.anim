@@ -475,7 +475,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.81666666
+        time: 1.45
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -488,36 +488,6 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: Main Camera/Canvas/Step24 (1)
-    classID: 1
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.81666666
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Main Camera/Canvas/Step28 (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -731,6 +701,36 @@ AnimationClip:
     classID: 1
     script: {fileID: 0}
     flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2.3333333
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Main Camera/Canvas/Step29 (1)
+    classID: 1
+    script: {fileID: 0}
+    flags: 0
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -768,15 +768,6 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 87830334
-      attribute: 2086281974
-      script: {fileID: 0}
-      typeID: 1
-      customType: 0
-      isPPtrCurve: 0
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 3234644543
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -867,6 +858,15 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3729595324
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4255968143
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -1087,7 +1087,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.81666666
+    m_StopTime: 2.3333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -1321,7 +1321,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.81666666
+        time: 1.45
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -1334,36 +1334,6 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: Main Camera/Canvas/Step24 (1)
-    classID: 1
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.81666666
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Main Camera/Canvas/Step28 (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -2960,6 +2930,36 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: CanvasWorld/Alatan/TiubSpecimen4Parent/TiubSpecimen4/dcpip
+    classID: 1
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2.3333333
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Main Camera/Canvas/Step29 (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
