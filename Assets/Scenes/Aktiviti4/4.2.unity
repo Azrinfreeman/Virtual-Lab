@@ -1915,7 +1915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2416.4688, y: -145.805}
+  m_AnchoredPosition: {x: 2908.7512, y: -145.805}
   m_SizeDelta: {x: 75.237, y: 159.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52530054
@@ -6185,7 +6185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3143.6914, y: -145.805}
+  m_AnchoredPosition: {x: 3364.0417, y: -145.805}
   m_SizeDelta: {x: 44.947, y: 151.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146325106
@@ -6524,7 +6524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2217.7903, y: -145.805}
+  m_AnchoredPosition: {x: 2238.136, y: -145.805}
   m_SizeDelta: {x: 110.439, y: 154.855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148511877
@@ -8456,6 +8456,18 @@ MonoBehaviour:
           m_StringArgument: bstep1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 846270197}
+        m_TargetAssemblyTypeName: TouchController2, Assembly-CSharp
+        m_MethodName: EnableTouches
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &190123558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9735,7 +9747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1431.583, y: -145.805}
+  m_AnchoredPosition: {x: 882.3738, y: -145.805}
   m_SizeDelta: {x: 141.1962, y: 141.1962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213055604
@@ -16940,7 +16952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1678.6198, y: -145.805}
+  m_AnchoredPosition: {x: 1766.3705, y: -145.805}
   m_SizeDelta: {x: 141.1962, y: 141.1962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276057415
@@ -27799,6 +27811,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!4 &431683742
 Transform:
   m_ObjectHideFlags: 0
@@ -29481,6 +29494,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &500720934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31529,6 +31543,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &571060309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31798,7 +31813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1184.5463, y: -145.805}
+  m_AnchoredPosition: {x: 1156.8807, y: -145.805}
   m_SizeDelta: {x: 141.1962, y: 141.1962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573244649
@@ -32496,7 +32511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 490.80856, y: -145.805}
+  m_AnchoredPosition: {x: 380.73245, y: -145.805}
   m_SizeDelta: {x: 46.451, y: 219.354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585926268
@@ -32810,6 +32825,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &594231732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37345,7 +37361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3342.9956, y: -145.805}
+  m_AnchoredPosition: {x: 2666.832, y: -145.805}
   m_SizeDelta: {x: 141.98, y: 154.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710541386
@@ -39005,6 +39021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751214866}
+  - component: {fileID: 751214870}
   - component: {fileID: 751214867}
   - component: {fileID: 751214868}
   - component: {fileID: 751214869}
@@ -39092,6 +39109,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &751214870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751214865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5dd204e3f6dd314b84432719160e3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenPoint: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
+  isW: 0
+  isStop: 1
+  isStep2: 0
+  isProcedure: 0
 --- !u!1 &752742775
 GameObject:
   m_ObjectHideFlags: 0
@@ -39786,6 +39821,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &769869351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41164,6 +41200,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &788698291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64450,7 +64487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 937.50946, y: -145.805}
+  m_AnchoredPosition: {x: 607.8668, y: -145.805}
   m_SizeDelta: {x: 141.1962, y: 141.1962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823706094
@@ -66341,6 +66378,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &864852416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70109,7 +70147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 690.4727, y: -145.805}
+  m_AnchoredPosition: {x: 153.5981, y: -145.805}
   m_SizeDelta: {x: 141.1962, y: 141.1962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951516557
@@ -84601,6 +84639,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1270047194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87934,7 +87973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2624.2166, y: -145.805}
+  m_AnchoredPosition: {x: 3143.9692, y: -145.805}
   m_SizeDelta: {x: 128.577, y: 140.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388025886
@@ -94030,7 +94069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2975.7144, y: -145.805}
+  m_AnchoredPosition: {x: 2009.9425, y: -145.805}
   m_SizeDelta: {x: 79.3265, y: 155.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540014610
@@ -96404,6 +96443,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1609389237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96646,8 +96686,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 12.8007, y: 60}
-  m_SizeDelta: {x: 213.3736, y: 50}
+  m_AnchoredPosition: {x: -2.556, y: 60.0413}
+  m_SizeDelta: {x: 300.0166, y: 60.041}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1614539568
 MonoBehaviour:
@@ -96669,7 +96709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Penun Bunsen dan tristand
+  m_text: Penunu Bunsen dan tungku kaki tiga
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -100102,7 +100142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1955.8943, y: -145.805}
+  m_AnchoredPosition: {x: 1461.6255, y: -145.805}
   m_SizeDelta: {x: 201.672, y: 114.841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714338832
@@ -105329,6 +105369,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!1 &1852335483
 GameObject:
   m_ObjectHideFlags: 0
@@ -109290,6 +109331,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &1978003873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109734,6 +109776,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1994436208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110415,6 +110458,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &2008326800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112585,7 +112629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2812.278, y: -145.805}
+  m_AnchoredPosition: {x: 2444.5989, y: -145.805}
   m_SizeDelta: {x: 35.865, y: 144.635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050865387

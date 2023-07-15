@@ -13,43 +13,48 @@ public class DragController : MonoBehaviour
     public bool isStop;
     public bool isStep2;
 
+    public bool isProcedure;
 
 
     void OnMouseDown()
     {
-      //  Cursors.instance.cursors[0].gameObject.SetActive(true);
+        //  Cursors.instance.cursors[0].gameObject.SetActive(true);
 
-      //  Cursors.instance.cursors[1].gameObject.SetActive(false);
+        //  Cursors.instance.cursors[1].gameObject.SetActive(false);
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
 
     void OnMouseDrag()
     {
-        if (!isStop)
+        if (isProcedure)
         {
-
-            Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-
-            if (isW)
+            if (!isStop)
             {
-                transform.position = cursorPosition;
-                cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z + 10f);
-            }
-            else
-            {
-                transform.position = cursorPosition;
+
+                Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+                Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
+
+                if (isW)
+                {
+                    transform.position = cursorPosition;
+                    cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z + 10f);
+                }
+                else
+                {
+                    transform.position = cursorPosition;
+                }
             }
         }
+
 
     }
 
     void OnMouseUp()
     {
-       // Cursors.instance.cursors[0].gameObject.SetActive(false);
+        // Cursors.instance.cursors[0].gameObject.SetActive(false);
 
-       // Cursors.instance.cursors[1].gameObject.SetActive(true);
+        // Cursors.instance.cursors[1].gameObject.SetActive(true);
     }
 
     void Update()

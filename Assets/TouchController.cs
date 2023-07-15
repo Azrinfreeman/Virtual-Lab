@@ -58,8 +58,27 @@ public class TouchController : MonoBehaviour
         {
             Barangs[i] = transform.GetChild(i);
         }
+        DisableTouches();
     }
+    public void DisableTouches()
+    {
+        for (int i = 0; i < Barangs.Length; i++)
+        {
+            Barangs[i].GetComponent<DragController>().isProcedure = false;
+            Barangs[i].GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("disable");
 
+        }
+    }
+    public void EnableTouches()
+    {
+        for (int i = 0; i < Barangs.Length; i++)
+        {
+            Barangs[i].GetComponent<DragController>().isProcedure = true;
+            Barangs[i].GetComponent<BoxCollider>().enabled = true;
+            Debug.Log("disable");
+        }
+    }
 
 
     // Update is called once per frame

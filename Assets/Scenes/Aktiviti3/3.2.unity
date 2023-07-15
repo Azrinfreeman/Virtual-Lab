@@ -6525,6 +6525,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &199963757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13102,6 +13103,7 @@ MonoBehaviour:
   isW: 0
   isStop: 1
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &433136327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17798,6 +17800,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &584251565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18626,6 +18629,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &610331036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21823,7 +21827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Rak Tabung Uji '
+  m_text: 'Tabung Uji '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
@@ -52381,6 +52385,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1021345332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52587,6 +52592,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1032565667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53971,6 +53977,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &1078830857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56029,6 +56036,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &1171413154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65086,6 +65094,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!4 &1299311097
 Transform:
   m_ObjectHideFlags: 0
@@ -65488,6 +65497,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &1305907682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71040,6 +71050,18 @@ MonoBehaviour:
       - m_Target: {fileID: 273375623}
         m_TargetAssemblyTypeName: ObjectController2, Assembly-CSharp
         m_MethodName: Untouch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1010765489}
+        m_TargetAssemblyTypeName: TouchController2, Assembly-CSharp
+        m_MethodName: EnableTouches
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -78415,6 +78437,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1690592347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87552,6 +87575,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!65 &1856263984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96356,6 +96380,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 0
+  isProcedure: 0
 --- !u!114 &2076838010
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class TouchController2 : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
     }
     public Transform[] alat;
     // Start is called before the first frame update
@@ -18,6 +19,27 @@ public class TouchController2 : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             alat[i] = transform.GetChild(i);
+        }
+        DisableTouches();
+    }
+
+    public void DisableTouches()
+    {
+        for (int i = 0; i < alat.Length; i++)
+        {
+            alat[i].GetComponent<DragController>().isProcedure = false;
+            alat[i].GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("disable");
+
+        }
+    }
+    public void EnableTouches()
+    {
+        for (int i = 0; i < alat.Length; i++)
+        {
+            alat[i].GetComponent<DragController>().isProcedure = true;
+            alat[i].GetComponent<BoxCollider>().enabled = true;
+            Debug.Log("disable");
         }
     }
 
@@ -31,7 +53,7 @@ public class TouchController2 : MonoBehaviour
             if (Physics.Raycast(raycast, out raycastHit))
             {
                 //Debug.Log("touch\n");
-                if (raycastHit.collider.transform.childCount >0)
+                if (raycastHit.collider.transform.childCount > 0)
                 {
                     var hitObject = raycastHit.collider.transform.GetChild(0).name;
                     var selectedObject = raycastHit.collider.transform.GetChild(0);

@@ -346,6 +346,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &8907600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8449,6 +8450,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &241681252
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10457,6 +10459,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: bstep1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2107596782}
+        m_TargetAssemblyTypeName: TouchController, Assembly-CSharp
+        m_MethodName: EnableTouches
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &283430924
@@ -22541,6 +22555,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &521469832
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35622,6 +35637,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!1 &945867765
 GameObject:
   m_ObjectHideFlags: 0
@@ -45869,6 +45885,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!65 &1228565778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46004,6 +46021,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &1237021595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47094,6 +47112,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!1 &1270236442
 GameObject:
   m_ObjectHideFlags: 0
@@ -51296,6 +51315,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!1 &1332682938
 GameObject:
   m_ObjectHideFlags: 0
@@ -52450,6 +52470,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &1377044262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52633,6 +52654,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &1381379446
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53422,6 +53444,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!1 &1402423815
 GameObject:
   m_ObjectHideFlags: 0
@@ -53644,6 +53667,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!1 &1410548880
 GameObject:
   m_ObjectHideFlags: 0
@@ -60735,6 +60759,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &1590441273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64131,6 +64156,7 @@ MonoBehaviour:
   isW: 0
   isStop: 0
   isStep2: 1
+  isProcedure: 0
 --- !u!54 &1727665891
 Rigidbody:
   m_ObjectHideFlags: 0
