@@ -161,7 +161,7 @@ public class ObjectController : MonoBehaviour
             {
                 if (bstep1.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !bstep1.IsInTransition(0) && !SceneAnim.IsInTransition(0))
                 {
-                    Debug.Log(touch.Barangs[0]);
+                    //Debug.Log(touch.Barangs[0]);
                     text.text = "Tarik bikar ampaian kanji 1% ke silinder penyukat  ";
                     if (touch.Barangs[0].GetComponent<IsCollided>().isCollide &&
                     touch.Barangs[1].GetComponent<IsCollided>().isCollide)
@@ -570,7 +570,7 @@ public class ObjectController : MonoBehaviour
                     //C pengukus air dengan jam
                     if (
                     touch.Barangs[3].GetComponent<IsCollided>().isCollide &&
-                    touch.Barangs[13].GetComponent<IsCollided>().isCollide)
+                    touch.Barangs[9].GetComponent<IsCollided>().isCollide)
                     {
                         anim.Play("step27");
                         StartCoroutine(TrueAndFalseWithTimeTwo(2f, 3, 13));
