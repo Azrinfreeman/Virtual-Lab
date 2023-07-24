@@ -31,7 +31,8 @@ public class LoginController : MonoBehaviour
 
     public void Login()
     {
-        StartCoroutine(LoginUser(Domain, text[0].text, text[1].text));
+        //StartCoroutine(LoginUser(Domain, text[0].text, text[1].text));
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void InsertKuizEks()

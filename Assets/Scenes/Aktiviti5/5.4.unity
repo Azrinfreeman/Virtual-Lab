@@ -926,8 +926,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: KUIZ
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1430,7 +1430,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: TEORI
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &72371242
@@ -2912,7 +2912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25.2814, y: 0}
+  m_AnchoredPosition: {x: -11, y: 0}
   m_SizeDelta: {x: -50.5627, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161413145
@@ -2937,8 +2937,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jarum
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2969,8 +2969,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6317,7 +6317,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 6. Apakah unit yang digunakan untuk mengukur nilai tenaga makanan?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -6349,7 +6349,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -6382,7 +6382,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &339664083
@@ -11116,7 +11116,7 @@ MonoBehaviour:
   m_text: "2. Antara kacang berikut, yang manakah mempunyai nilai tenaga yang paling
     tinggi?\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -11148,7 +11148,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -11181,7 +11181,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &546981380
@@ -12023,7 +12023,7 @@ MonoBehaviour:
   m_text: "3. Sampel makanan yang berjisim 0.5g dibakar dan menunjukkan kenaikan
     suhu 20\xB0C bagi 10 cm3 air. Apakah nilai tenaga bagi sampel makanan ini?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -12055,7 +12055,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -12088,7 +12088,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &596635483
@@ -13497,8 +13497,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Plastisin
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13529,7 +13529,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -13838,8 +13838,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Kaki Retort
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13870,7 +13870,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -16449,7 +16449,7 @@ MonoBehaviour:
   m_text: 5. Rajah berikut menunjukkan susunan radas untuk menentukan nilai tenaga
     dalam sampel makanan. Apakah tujuan meletakkan kapas pada tabung didih?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -16481,7 +16481,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -16514,7 +16514,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &820924609
@@ -17060,7 +17060,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: KUIZ
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -17092,7 +17092,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -17125,7 +17125,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &839012409
@@ -23967,7 +23967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1224468869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25480,7 +25480,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 8. Padankan radas berikut dengan jawapan yang betul.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -25512,7 +25512,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -25545,7 +25545,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1279628799
@@ -28141,7 +28141,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: KEPUTUSAN EKSPERIMEN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -28173,7 +28173,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -28206,7 +28206,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1434052329
@@ -30963,8 +30963,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Termometer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -30995,7 +30995,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -31389,7 +31389,7 @@ MonoBehaviour:
   m_text: 7. Antara berikut, yang manakah makanan paling berkhasiat untuk membekalkan
     tenaga ?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -31421,7 +31421,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -31454,7 +31454,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1627923966
@@ -33101,7 +33101,7 @@ MonoBehaviour:
   m_text: 4. Antara berikut merupakan kelas makanan yang tidak membekalkan tenaga
     kepada manusia?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -33133,7 +33133,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -33166,7 +33166,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1678308161
@@ -35471,7 +35471,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: MAKMAL MAYA
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
     type: 2}
   m_fontSharedMaterials: []
@@ -35503,7 +35503,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -35536,7 +35536,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1843787410
@@ -37400,8 +37400,8 @@ MonoBehaviour:
   m_text: 1. Dalam satu eksperimen untuk mengkaji nilai tenaga dalam sampel makanan,
     yang manakah pemboleh ubah yang perlu dimalarkan?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e64be769176ec324b8fe621ff964bac8, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -37432,7 +37432,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -40102,7 +40102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 279050308}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1

@@ -1330,8 +1330,8 @@ public class ObjectController2 : MonoBehaviour
                     {
                         text.text = "Tekan jarum yang ada plastisin dan kacang tanah dan penunu bunsen ";
                         textHistory.text = "26. Tekan penunu bunsen. ";
-                        if (TouchController2.instance.alat[5].GetComponent<SelectedController>().isSelected &&
-                        TouchController2.instance.alat[2].GetComponent<SelectedController>().isSelected)
+                        if (TouchController2.instance.alat[5].GetChild(0).GetComponent<SelectedController>().isSelected &&
+                        TouchController2.instance.alat[2].GetChild(0).GetComponent<SelectedController>().isSelected)
                         {
                             ButtonControllers.instance.buttons[27 - 1].gameObject.SetActive(true);
 

@@ -13,16 +13,39 @@ public class LoadUserEks : MonoBehaviour
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-
-        StartCoroutine(GetKuizData(Domain,no));
+        if (no == 2)
+        {
+            text.text = PlayerPrefs.GetInt("k2").ToString() + " / 10";
+        }
+        else if (no == 3)
+        {
+            text.text = PlayerPrefs.GetInt("k3").ToString() + " / 10";
+        }
+        else if (no == 4)
+        {
+            text.text = PlayerPrefs.GetInt("k4").ToString() + " / 10";
+        }
+        else if (no == 5)
+        {
+            text.text = PlayerPrefs.GetInt("k5").ToString() + " / 10";
+        }
+        else if (no == 6)
+        {
+            text.text = PlayerPrefs.GetInt("k6").ToString() + " / 10";
+        }
+        else if (no == 7)
+        {
+            text.text = PlayerPrefs.GetInt("k7").ToString() + " / 10";
+        }
+        //StartCoroutine(GetKuizData(Domain,no));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    IEnumerator GetKuizData(string Domain,int no)
+    IEnumerator GetKuizData(string Domain, int no)
     {
 
         WWWForm form = new WWWForm();
@@ -39,7 +62,7 @@ public class LoadUserEks : MonoBehaviour
             }
             else
             {
-                
+
                 //show result as text .text
                 //.Log(www.downloadHandler.text);
                 //if it's an id 

@@ -14,15 +14,39 @@ public class LoadUserScore : MonoBehaviour
     {
         text = GetComponent<TextMeshProUGUI>();
 
-        StartCoroutine(GetKuizData(Domain,no));
+        if (no == 2)
+        {
+            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+        }
+        else if (no == 3)
+        {
+            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+        }
+        else if (no == 4)
+        {
+            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+        }
+        else if (no == 5)
+        {
+            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+        }
+        else if (no == 6)
+        {
+            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+        }
+        else if (no == 7)
+        {
+            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+        }
+        //StartCoroutine(GetKuizData(Domain, no));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    IEnumerator GetKuizData(string Domain,int no)
+    IEnumerator GetKuizData(string Domain, int no)
     {
 
         WWWForm form = new WWWForm();
@@ -43,7 +67,15 @@ public class LoadUserScore : MonoBehaviour
                 //show result as text .text
                 //.Log(www.downloadHandler.text);
                 //if it's an id 
-                text.text = www.downloadHandler.text + " / 10";
+                if (www.downloadHandler.text == "error")
+                {
+                    text.text = "none";
+                }
+                else
+                {
+
+                    text.text = www.downloadHandler.text + " / 10";
+                }
                 //show result as binary using []
                 //binaryData = www.downloadHandler.data;
             }
