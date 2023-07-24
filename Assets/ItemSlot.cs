@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public string answerStore;
+
+    public string answerStore2;
     public AudioSource slotInsertedAudio;
     // Start is called before the first frame update
     void Start()

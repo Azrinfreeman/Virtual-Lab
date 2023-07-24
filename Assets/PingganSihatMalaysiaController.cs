@@ -19,8 +19,10 @@ public class PingganSihatMalaysiaController : MonoBehaviour
         if(section[0].GetComponent<PingganName>().plateName != "" && section[1].GetComponent<PingganName>().plateName != "" 
         && section[2].GetComponent<PingganName>().plateName != "" && section[3].GetComponent<PingganName>().plateName != "")
         {
-            if(section[0].GetComponent<PingganName>().plateName.ToUpper() == "IKAN" && section[1].GetComponent<PingganName>().plateName.ToUpper() == "NASI" 
-            && section[2].GetComponent<PingganName>().plateName.ToUpper() == "BUAH" && section[3].GetComponent<PingganName>().plateName.ToUpper() == "SAYUR")
+            if(section[0].GetComponent<PingganName>().plateName.ToUpper() == "IKAN" || section[0].GetComponent<PingganName>().plateName.ToUpper() == "NASI" 
+            && section[1].GetComponent<PingganName>().plateName.ToUpper() == "NASI" || section[1].GetComponent<PingganName>().plateName.ToUpper() == "IKAN" 
+            && section[2].GetComponent<PingganName>().plateName.ToUpper() == "BUAH" || section[2].GetComponent<PingganName>().plateName.ToUpper() == "SAYUR"
+            && section[3].GetComponent<PingganName>().plateName.ToUpper() == "SAYUR"|| section[3].GetComponent<PingganName>().plateName.ToUpper() == "BUAH")
             {
                 Debug.Log("correct");
                 winAndFail[3].gameObject.SetActive(true);
