@@ -9,7 +9,8 @@ public class SelectedController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Outline>().OutlineColor = Color.white;
+        GetComponent<Outline>().OutlineColor = Color.yellow;
+        
     }
 
     // Update is called once per frame

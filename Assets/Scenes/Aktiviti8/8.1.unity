@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 10491104}
   - component: {fileID: 10491103}
   - component: {fileID: 10491106}
+  - component: {fileID: 10491107}
+  - component: {fileID: 10491108}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -230,6 +232,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jawapanName: 
+--- !u!114 &10491107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10491101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a0c5ff3dbd5c1418d5c8093ea71873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answers: {fileID: 74946124}
+--- !u!65 &10491108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10491101}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 67.62, y: 56.29, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &11022902
 GameObject:
   m_ObjectHideFlags: 0

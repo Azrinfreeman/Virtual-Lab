@@ -250,7 +250,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                     eventData.pointerDrag.AddComponent<Mask>();
                 }
                 GetComponent<PiramidJawapan>().jawapanName = eventData.pointerDrag.transform.name;
-
+                eventData.pointerDrag.transform.SetParent(transform.parent);
             }
             else
             {

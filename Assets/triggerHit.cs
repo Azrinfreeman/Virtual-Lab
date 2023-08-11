@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class triggerHit : MonoBehaviour
 {
+    [Header("Optional")]
+    [SerializeField] Transform answers;
     // Start is called before the first frame update
     void Start()
     {
@@ -132,6 +135,35 @@ public class triggerHit : MonoBehaviour
             }
 
         }
+        else if (SceneManager.GetActiveScene().name == "8.1")
+        {
+            Debug.Log("triggerhit");
+            if (other.gameObject.tag == "s1")
+            {
+
+                GetComponent<PiramidJawapan>().jawapanName = "";
+                other.gameObject.tag = "temps1";
+            }
+            else if (other.gameObject.tag == "s2")
+            {
+                GetComponent<PiramidJawapan>().jawapanName = "";
+                other.gameObject.tag = "temps2";
+            }
+            else if (other.gameObject.tag == "s3")
+            {
+                GetComponent<PiramidJawapan>().jawapanName = "";
+                other.gameObject.tag = "temps3";
+            }
+            else if (other.gameObject.tag == "s4")
+            {
+                GetComponent<PiramidJawapan>().jawapanName = "";
+                other.gameObject.tag = "temps4";
+            }
+
+            other.transform.SetParent(answers);
+            other.transform.SetAsFirstSibling();
+
+        }
         else if (SceneManager.GetActiveScene().name == "8.2")
         {
             if (other.gameObject.tag == "s1")
@@ -159,4 +191,6 @@ public class triggerHit : MonoBehaviour
         }
 
     }
+
+
 }

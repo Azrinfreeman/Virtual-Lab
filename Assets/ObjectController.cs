@@ -341,7 +341,8 @@ public class ObjectController : MonoBehaviour
                     if (
                     touch.Barangs[6].GetChild(0).GetComponent<SelectedController>().isToggle)
                     {
-                        button9.gameObject.SetActive(true);
+                        //button9.gameObject.SetActive(true);
+                        anim.Play("step9");
                         Untouch();
                     }
 
@@ -366,7 +367,8 @@ public class ObjectController : MonoBehaviour
                     touch.Barangs[7].GetChild(0).GetComponent<SelectedController>().isToggle &&
                     touch.Barangs[8].GetChild(0).GetComponent<SelectedController>().isToggle)
                     {
-                        button10_12.gameObject.SetActive(true);
+                        //button10_12.gameObject.SetActive(true);
+                        anim.Play("step10-12");
                         Untouch();
                     }
 
@@ -458,7 +460,8 @@ public class ObjectController : MonoBehaviour
                     touch.Barangs[10].GetChild(0).GetComponent<SelectedController>().isToggle &&
                     touch.Barangs[7].GetChild(0).GetComponent<SelectedController>().isToggle)
                     {
-                        button18_20.gameObject.SetActive(true);
+                        //button18_20.gameObject.SetActive(true);
+                        anim.Play("step18-20");
                         Untouch();
                     }
 
@@ -551,7 +554,8 @@ public class ObjectController : MonoBehaviour
                     touch.Barangs[7].GetChild(0).GetComponent<SelectedController>().isToggle &&
                     touch.Barangs[13].GetChild(0).GetComponent<SelectedController>().isToggle)
                     {
-                        button25_26.gameObject.SetActive(true);
+                        //button25_26.gameObject.SetActive(true);
+                        anim.Play("step25-26");
                         Untouch();
                     }
 
