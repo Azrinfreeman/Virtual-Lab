@@ -510,6 +510,7 @@ public class ObjectController : MonoBehaviour
                         anim.Play("step22-23");
                         StartCoroutine(TrueAndFalseWithTimeTwo(2f, 3, 9));
                         Untouch();
+                        
                     }
 
                 }
