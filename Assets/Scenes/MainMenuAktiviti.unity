@@ -292,8 +292,8 @@ RectTransform:
   m_Father: {fileID: 2134998130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.28091192}
+  m_AnchorMax: {x: 1, y: 0.9972693}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.7214355, y: -93.44989}
-  m_SizeDelta: {x: 636.3373, y: 68.154}
+  m_AnchoredPosition: {x: -6.7214355, y: -79}
+  m_SizeDelta: {x: 636.3373, y: 56.6677}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40070045
 MonoBehaviour:
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MAIN MENU - AKTIVITI
+  m_text: MENU UTAMA - AKTIVITI
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -1747,8 +1747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -229.3683}
-  m_SizeDelta: {x: 966.5054, y: 974.0339}
+  m_AnchoredPosition: {x: 0, y: -44.847435}
+  m_SizeDelta: {x: 966.5054, y: 881.6942}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &279050309
 MonoBehaviour:
@@ -1803,10 +1803,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 60
-    m_Bottom: 60
+    m_Top: 11
+    m_Bottom: 85
   m_ChildAlignment: 4
-  m_Spacing: 46.79
+  m_Spacing: -53.27
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1987,8 +1987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -210.59668, y: 266.2245}
-  m_SizeDelta: {x: 137.99463, y: 137.9946}
+  m_AnchoredPosition: {x: -210.59668, y: 384.2245}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &312811287
 MonoBehaviour:
@@ -2066,7 +2066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 470f6347392ce724d94290d84a1408f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2101,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &342399276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3871,7 +3871,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494532168
 MonoBehaviour:
@@ -9278,7 +9278,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -311.042}
-  m_SizeDelta: {x: 441, y: 404}
+  m_SizeDelta: {x: 373.0575, y: 215.7547}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!95 &1209514195
 Animator:
@@ -15686,7 +15686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2043568651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15751,8 +15751,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 29774305}
   m_HandleRect: {fileID: 29774304}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.5290344
+  m_Value: 0.99037266
+  m_Size: 0.71635735
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15915,8 +15915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -170.84482}
-  m_SizeDelta: {x: 992.7224, y: 515.2974}
+  m_AnchoredPosition: {x: 0, y: -128.38528}
+  m_SizeDelta: {x: 992.7224, y: 791.9995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079303935
 MonoBehaviour:
@@ -15940,7 +15940,7 @@ MonoBehaviour:
   m_ScrollSensitivity: 80
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 2043568652}
+  m_VerticalScrollbar: {fileID: 0}
   m_HorizontalScrollbarVisibility: 0
   m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: 0
@@ -16351,12 +16351,12 @@ PrefabInstance:
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 118.0591
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 118.0591
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
@@ -16396,12 +16396,12 @@ PrefabInstance:
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 529
+      value: 719
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 264.45642
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
@@ -16422,6 +16422,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: settingbtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050318035564000539, guid: 348c15c0062dd5845a045a5bc981efb7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050318035564000539, guid: 348c15c0062dd5845a045a5bc981efb7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

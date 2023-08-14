@@ -1151,12 +1151,12 @@ PrefabInstance:
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 118.0591
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 118.0591
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
@@ -1196,12 +1196,12 @@ PrefabInstance:
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 680
+      value: 719.2
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 172
+      value: 278.8
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
@@ -1222,6 +1222,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: settingbtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050318035564000539, guid: 348c15c0062dd5845a045a5bc981efb7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050318035564000539, guid: 348c15c0062dd5845a045a5bc981efb7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1492,8 +1502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.14978, y: 0}
-  m_SizeDelta: {x: 1475.8994, y: 820.4183}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_SizeDelta: {x: 1668.0686, y: 901.5562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202461890
 MonoBehaviour:
@@ -1508,14 +1518,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
+  m_Color: {r: 0.98823535, g: 0.89019614, b: 0.027450982, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 37e2c862b199b1145889a60059444bfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ef029f0b7798a44db241d4e89289366, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1817,8 +1827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 33.92511, y: 0}
+  m_SizeDelta: {x: -287.2336, y: -0.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278288270
 MonoBehaviour:
@@ -1840,13 +1850,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1)Menamakan enzim yang terlibat dalam pencernaan kanji.\r\n2)Menjelaskan
-    proses pencernaan kanji dengan betul.\r\n3)Menamakan ujian makanan untuk menguji
-    kehadiran kanji dan \r               gula penurun.\r\n4)Membina hipotesis berdasarkan
-    pernyataan masalah.\r\n5)Merancang eksperimen untuk menguji hipotesis.\r\n6)Memerhati
-    sebarang perubahan terhadap parameter.\r\n7)Melaporkan keputusan eksperimen yang
-    diperoleh.\r\n8)Membuat interpretasi keputusan eksperimen dengan betul.\r\n9)Mentafsir
-    data untuk membuat kesimpulan.\r\n"
+  m_text: '1)Menamakan enzim yang terlibat dalam pencernaan kanji.
+
+    2)Menjelaskan
+    proses pencernaan kanji dengan betul.
+
+    3)Menamakan ujian makanan untuk menguji
+    kehadiran kanji dan gula penurun
+
+    4)Membina hipotesis berdasarkan pernyataan
+    masalah.
+
+    5)Merancang eksperimen untuk menguji hipotesis.
+
+    6)Memerhati
+    sebarang perubahan terhadap parameter.
+
+    7)Melaporkan keputusan eksperimen
+    yang diperoleh.
+
+    8)Membuat interpretasi keputusan eksperimen dengan betul.
+
+    9)Mentafsir
+    data untuk membuat kesimpulan.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -1874,14 +1902,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.57
-  m_fontSizeBase: 42.57
+  m_fontSize: 44.82
+  m_fontSizeBase: 44.82
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3922,7 +3950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &596273982
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4920,7 +4948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -89}
+  m_AnchoredPosition: {x: 0, y: -31}
   m_SizeDelta: {x: 0, y: 107.6727}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &781798058
@@ -6909,8 +6937,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 73}
-  m_SizeDelta: {x: 392.7469, y: 124.60242}
+  m_AnchoredPosition: {x: 0, y: 18}
+  m_SizeDelta: {x: 392.7469, y: 89}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1045540825
 MonoBehaviour:
@@ -7239,8 +7267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
-  m_SizeDelta: {x: 137.99463, y: 137.9946}
+  m_AnchoredPosition: {x: 0.000061035156, y: 13}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1097390205
 MonoBehaviour:
@@ -7262,7 +7290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 470f6347392ce724d94290d84a1408f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7787,7 +7815,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257248688
 MonoBehaviour:
@@ -9102,7 +9130,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.00024414062, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1472321415
 Animator:
@@ -9610,8 +9638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.570984, y: 9.836609}
-  m_SizeDelta: {x: 1256.2876, y: 376.89}
+  m_AnchoredPosition: {x: 0.0020523, y: -2.4349976}
+  m_SizeDelta: {x: 1668.1, y: 630.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580863955
 MonoBehaviour:
@@ -9639,7 +9667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.015686275}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9686,7 +9714,7 @@ MonoBehaviour:
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 596273983}
+  m_VerticalScrollbar: {fileID: 0}
   m_HorizontalScrollbarVisibility: 0
   m_VerticalScrollbarVisibility: 0
   m_HorizontalScrollbarSpacing: 0
@@ -10857,8 +10885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 16.301, y: 0}
-  m_SizeDelta: {x: 1223.7, y: 937.0863}
+  m_AnchoredPosition: {x: -0.000045776, y: 0}
+  m_SizeDelta: {x: 1668.1, y: 630.75}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1712743743
 MonoBehaviour:
@@ -10873,7 +10901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.015686275}
+  m_Color: {r: 0.98823535, g: 0.89019614, b: 0.027450982, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
