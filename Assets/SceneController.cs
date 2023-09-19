@@ -7,26 +7,30 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    IEnumerator waits(string name){
-        
-        yield return new  WaitForSeconds(1f);
+    IEnumerator waits(string name)
+    {
+
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(name);
     }
 
-    public void ChangeScene(string name){
+    public void ChangeScene(string name)
+    {
         StartCoroutine(waits(name));
+
     }
 
-    public void QuitApplication(){
+    public void QuitApplication()
+    {
         Application.Quit();
     }
 
