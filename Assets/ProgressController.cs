@@ -251,7 +251,7 @@ public class ProgressController : MonoBehaviour
                     text.text = "75%";
                 }
             }
-            else if (mainScene.GetCurrentAnimatorStateInfo(0).IsName("step26"))
+            else if (mainScene.GetCurrentAnimatorStateInfo(0).IsName("step25"))
             {
 
                 if (mainScene.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !mainScene.IsInTransition(0))

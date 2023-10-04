@@ -11810,7 +11810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 530, y: 0}
   m_SizeDelta: {x: 896.9684, y: 867.7524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &387585095
@@ -13611,7 +13611,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.15001717, y: 0.69101006, z: 0.69101006, w: 0.15001717}
   m_LocalPosition: {x: 0.001, y: 0, z: 1.324}
-  m_LocalScale: {x: 0.5942828, y: 1.077019, z: 0.594283}
+  m_LocalScale: {x: 0.5942828, y: 0.19928913, z: 0.594283}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88507666}
@@ -62038,8 +62038,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tarik silinder penyukat ke tabung uji A (telah berisi albumen dan asid)
-    untuk masukkan larutan pepsin dalam tabung uji A '
+  m_text: 'Tarik silinder penyukat ke tabung uji A (yang berisi ampaian albumen dan
+    asid hidroklorik) untuk masukkan larutan pepsin dalam tabung uji A '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -66750,7 +66750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1302682910
 RectTransform:
   m_ObjectHideFlags: 0

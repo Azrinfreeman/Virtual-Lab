@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 17238f7376a511142b25b79ee864e3a8
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -13,12 +13,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Graduated_Cylinder_50_mL_bump
-    second: {fileID: 2800000, guid: 5964569f4fa22cc4386095d4042b2aa2, type: 3}
+    second: {fileID: 2800000, guid: 015f3a9b18a79bc4988376c622415739, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Graduated_Cylinder_50_mL_refract
-    second: {fileID: 2800000, guid: 2d101023463d3624083f881e8d5139a5, type: 3}
+    second: {fileID: 2800000, guid: 4c40d900b8f41d74d9ab164323e806d5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -55,6 +55,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
@@ -82,6 +83,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -103,7 +105,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.29999998
+    globalScale: 30
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
@@ -114,6 +116,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
