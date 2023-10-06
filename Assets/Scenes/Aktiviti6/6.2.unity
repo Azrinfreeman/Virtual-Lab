@@ -879,8 +879,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke larutan asid askorbik. Asid askorbik masuk ke dalam
-    picagari
+  m_text: Tarik picagari 5 ml ke larutan asid askorbik untuk memasukkan 5 ml larutan
+    asid askorbik ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -1874,8 +1874,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke tiub spesimen 1 (ada DCPIP). Larutan askorbik akan
-    masuk ke dalam tiub setitis demi setitis
+  m_text: Tarik picagari 5 ml ke tiub spesimen 1 untuk memasukkan larutan asid askorbik
+    ke dalam tiub spesimen 1 setitis demi setitis.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -5785,6 +5785,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: stayPrompt
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 841322085}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 839456325}
@@ -12795,7 +12807,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml ke larutan DCPIP. Larutan DCPIP masuk ke picagari
+  m_text: Tarik picagari 1 ml ke larutan DCPIP untuk memasukkan 1 ml larutan DCPIP
+    ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -21899,8 +21912,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml (ada larutan DCPIP warna biru) untuk masukkan ke tiub
-    spesimen 1
+  m_text: Tarik picagari ke tiub spesimen 1 untuk memasukkan larutan DCPIP ke dalam
+    tiub spesimen 1.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -22035,8 +22048,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml (ada larutan DCPIP warna biru) ke tiub spesimen 3. Larutan
-    DCPIP masuk ke dalam tiub spesimen 3
+  m_text: Tarik picagari ke tiub spesimen 3 untuk memasukkan larutan DCPIP ke dalam
+    tiub spesimen 3.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -23330,12 +23343,12 @@ PrefabInstance:
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -45.1
+      value: -45.100098
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -112.6
+      value: -112.599976
       objectReference: {fileID: 0}
     - target: {fileID: 5166819259904682769, guid: 348c15c0062dd5845a045a5bc981efb7,
         type: 3}
@@ -23709,7 +23722,7 @@ MonoBehaviour:
   m_text: SETERUSNYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -23773,7 +23786,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &374201609
@@ -27818,7 +27831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1325, y: -24.3}
+  m_AnchoredPosition: {x: 1325, y: -24.300049}
   m_SizeDelta: {x: 386.3634, y: 521.6581}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &468638881
@@ -29995,8 +30008,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke tiub specimen 4 (ada DCPIP). Lobak merah akan masuk
-    ke dalam tiub setitis demi setitis
+  m_text: Tarik picagari 5 ml ke tiub spesimen 4 untuk memasukkan jus lobak merah
+    ke dalam tiub spesimen 4 setitis demi setitis.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -31275,6 +31288,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: stayPrompt
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1758895430}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 839456325}
@@ -32645,7 +32670,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml ke larutan DCPIP. Larutan DCPIP masuk dalam picagari
+  m_text: Tarik picagari 1 ml ke larutan DCPIP untuk memasukkan 1 ml larutan DCPIP
+    ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -33397,8 +33423,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml (ada larutan DCPIP warna biru) ke tiub spesimen 4. Larutan
-    DCPIP masuk ke dalam tiub spesimen 4
+  m_text: Tarik picagari ke tiub spesimen 4 untuk memasukkan larutan DCPIP ke dalam
+    tiub spesimen 4.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -34339,7 +34365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 68}
+  m_AnchoredPosition: {x: 125, y: -61}
   m_SizeDelta: {x: 392.74683, y: 124.60242}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &596200802
@@ -35840,7 +35866,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke jus limau nipis. Jus limau nipis masuk ke dalam picagari
+  m_text: Tarik picagari 5 ml ke jus limau nipis untuk memasukkan 5 ml jus limau
+    nipis ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -36469,6 +36496,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: stayPrompt
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2116952793}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 839456325}
@@ -40742,7 +40781,7 @@ MonoBehaviour:
   m_text: SETERUSNYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -43651,7 +43690,7 @@ MonoBehaviour:
   m_text: SETERUSNYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -45322,8 +45361,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke tiub spesimen 3 (ada DCPIP). Jus limau nipis akan
-    masuk ke dalam tiub setitis demi setitis
+  m_text: Tarik picagari 5 ml ke tiub spesimen 3 untuk memasukkan jus limau nipis
+    ke dalam tiub spesimen 3 setitis demi setitis.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -51839,6 +51878,18 @@ MonoBehaviour:
           m_StringArgument: stayPrompt
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1809588167}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 839456325}
         m_TargetAssemblyTypeName: ObjectController2, Assembly-CSharp
         m_MethodName: Untouch
@@ -56237,7 +56288,7 @@ MonoBehaviour:
   m_text: SETERUSNYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -57531,7 +57582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 68}
+  m_AnchoredPosition: {x: 128, y: -40}
   m_SizeDelta: {x: 392.74683, y: 124.60242}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1231307933
@@ -63353,7 +63404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 68}
+  m_AnchoredPosition: {x: 140, y: -65}
   m_SizeDelta: {x: 392.74683, y: 124.60242}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1358392660
@@ -64939,7 +64990,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke jus lobak merah. Jus lobak merah masuk ke dalam picagari
+  m_text: Tarik picagari 5 ml ke jus lobak merah untuk memasukkan lagi 5 ml jus lobak
+    merah ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -65247,6 +65299,18 @@ MonoBehaviour:
           m_StringArgument: stayPrompt
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1725166073}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 839456325}
         m_TargetAssemblyTypeName: ObjectController2, Assembly-CSharp
         m_MethodName: Untouch
@@ -65354,7 +65418,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml ke larutan DCPIP. Larutan DCPIP masuk ke picagari
+  m_text: Tarik picagari 1 ml ke larutan DCPIP untuk memasukkan 1 ml larutan DCPIP
+    ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -66087,7 +66152,7 @@ MonoBehaviour:
   m_text: SETERUSNYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -67729,6 +67794,18 @@ MonoBehaviour:
           m_StringArgument: stayPrompt
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2099350185}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 839456325}
         m_TargetAssemblyTypeName: ObjectController2, Assembly-CSharp
         m_MethodName: Untouch
@@ -68448,7 +68525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 68}
+  m_AnchoredPosition: {x: 123, y: -47}
   m_SizeDelta: {x: 392.74683, y: 124.60242}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1498747416
@@ -74814,7 +74891,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke jus lobak merah. Jus lobak merah masuk ke dalam picagari
+  m_text: Tarik picagari 5 ml ke jus lobak merah untuk memasukkan 5 ml jus lobak
+    merah ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -78889,7 +78967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 68}
+  m_AnchoredPosition: {x: 142, y: -44}
   m_SizeDelta: {x: 392.74683, y: 124.60242}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1719742702
@@ -81532,6 +81610,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: stayPrompt
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 69990607}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 839456325}
@@ -85066,8 +85156,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml (ada larutan DCPIP warna biru) ke tiub spesimen 2. Larutan
-    DCPIP masuk ke dalam tiub spesimen 2
+  m_text: Tarik picagari ke tiub spesimen 2 untuk memasukkan larutan DCPIP ke dalam
+    tiub spesimen 2.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -88014,7 +88104,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1ml ke larutan DCPIP. Larutan DCPIP masuk ke picagari
+  m_text: Tarik picagari 1 ml ke larutan DCPIP untuk memasukkan 1 ml larutan DCPIP
+    ke dalam picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -88417,8 +88508,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke tiub spesimen 2 (ada DCPIP). Jus oren akan masuk
-    ke dalam tiub setitis demi setitis
+  m_text: Tarik picagari 5 ml ke tiub spesimen 2 untuk memasukkan jus oren ke dalam
+    tiub spesimen 2 setitis demi setitis.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -89152,7 +89243,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke jus oren. Jus oren masuk ke dalam picagari
+  m_text: Tarik picagari 5 ml ke jus oren untuk memasukkan 5 ml jus oren ke dalam
+    picagari.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -91120,7 +91212,7 @@ MonoBehaviour:
   m_text: SETERUSNYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
-  m_sharedMaterial: {fileID: 3611346216656139149, guid: e64be769176ec324b8fe621ff964bac8,
+  m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -91624,6 +91716,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: stayPrompt
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 686691268}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 839456325}
@@ -93423,8 +93527,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 5ml ke tiub spesimen 4 (ada DCPIP). Lobak merah akan masuk
-    ke dalam tiub setitis demi setitis
+  m_text: Tarik picagari 5 ml ke tiub spesimen 4 untuk memasukkan jus lobak merah
+    ke dalam tiub spesimen 4 setitis demi setitis.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -95059,7 +95163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 68}
+  m_AnchoredPosition: {x: 138, y: -66}
   m_SizeDelta: {x: 392.74683, y: 124.60242}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2122394542
