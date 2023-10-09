@@ -16,27 +16,33 @@ public class LoadUserScore : MonoBehaviour
 
         if (no == 2)
         {
-            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            StartCoroutine(GetKuizData(Domain, no));
         }
         else if (no == 3)
         {
-            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            StartCoroutine(GetKuizData(Domain, no));
         }
         else if (no == 4)
         {
-            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            StartCoroutine(GetKuizData(Domain, no));
         }
         else if (no == 5)
         {
-            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            StartCoroutine(GetKuizData(Domain, no));
         }
         else if (no == 6)
         {
-            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            StartCoroutine(GetKuizData(Domain, no));
         }
         else if (no == 7)
         {
-            text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("KuizNumber_"+no).ToString() + " / 10";
+            StartCoroutine(GetKuizData(Domain, no));
         }
         //StartCoroutine(GetKuizData(Domain, no));
     }
@@ -56,7 +62,7 @@ public class LoadUserScore : MonoBehaviour
         {
             yield return www.SendWebRequest();
 
-
+            Debug.Log(PlayerPrefs.GetInt("id_user"));
             if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.Log(www.error);
@@ -69,7 +75,7 @@ public class LoadUserScore : MonoBehaviour
                 //if it's an id 
                 if (www.downloadHandler.text == "error")
                 {
-                    text.text = "none";
+                    text.text = "error";
                 }
                 else
                 {

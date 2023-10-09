@@ -15,29 +15,29 @@ public class LoadUserEks : MonoBehaviour
         text = GetComponent<TextMeshProUGUI>();
         if (no == 2)
         {
-            text.text = PlayerPrefs.GetInt("k2").ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("k2").ToString() + " / 10";
         }
         else if (no == 3)
         {
-            text.text = PlayerPrefs.GetInt("k3").ToString() + " / 10";
+            //text.text = PlayerPrefs.GetInt("k3").ToString() + " / 10";
         }
         else if (no == 4)
         {
-            text.text = PlayerPrefs.GetInt("k4").ToString() + " / 10";
+          //  text.text = PlayerPrefs.GetInt("k4").ToString() + " / 10";
         }
         else if (no == 5)
         {
-            text.text = PlayerPrefs.GetInt("k5").ToString() + " / 10";
+        //    text.text = PlayerPrefs.GetInt("k5").ToString() + " / 10";
         }
         else if (no == 6)
         {
-            text.text = PlayerPrefs.GetInt("k6").ToString() + " / 10";
+        //    text.text = PlayerPrefs.GetInt("k6").ToString() + " / 10";
         }
         else if (no == 7)
         {
-            text.text = PlayerPrefs.GetInt("k7").ToString() + " / 10";
+        //    text.text = PlayerPrefs.GetInt("k7").ToString() + " / 10";
         }
-        //StartCoroutine(GetKuizData(Domain,no));
+        StartCoroutine(GetKuizData(Domain,no));
     }
 
     // Update is called once per frame

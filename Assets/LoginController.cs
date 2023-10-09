@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoginController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class LoginController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class LoginController : MonoBehaviour
 
     public void Login()
     {
+
         StartCoroutine(LoginUser(Domain, text[0].text, text[1].text));
         //SceneManager.LoadScene("MainMenu");
     }
@@ -39,7 +41,7 @@ public class LoginController : MonoBehaviour
     {
         StartCoroutine(InsertKuizAndEks(Domain, text[0].text));
     }
-    
+
     IEnumerator InsertKuizAndEks(string Domain, string username)
     {
         WWWForm form = new WWWForm();
@@ -91,7 +93,7 @@ public class LoginController : MonoBehaviour
         {
 
 
-            
+
             yield return www.SendWebRequest();
 
 
@@ -104,14 +106,17 @@ public class LoginController : MonoBehaviour
             }
             else
             {
-                
+
 
                 //show result as text .text
                 //.Log(www.downloadHandler.text);
-                if (www.downloadHandler.text.Equals("login valid"))
+                if (int.Parse(www.downloadHandler.text) > 0)
                 {
                     PlayerPrefs.SetString("username", username);
+                    PlayerPrefs.SetInt("id_user",int.Parse(www.downloadHandler.text));
                     SceneManager.LoadScene("MainMenu");
+
+                    Debug.Log(PlayerPrefs.GetInt("id_user"));
                 }
                 else
                 {
