@@ -22,8 +22,8 @@ public class StoreEksController : MonoBehaviour
 
     public void InsertEksperiment()
     {
-        //StartCoroutine(InsertEks(Domain, KeputusanController.instance.score, no));
-        PlayerPrefs.SetInt("k" + no, KeputusanController.instance.score);
+        StartCoroutine(InsertEks(Domain, KeputusanController.instance.score, no));
+        //PlayerPrefs.SetInt("k" + no, KeputusanController.instance.score);
     }
     IEnumerator InsertEks(string Domain, int score, int no)
     {
