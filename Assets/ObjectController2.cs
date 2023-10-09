@@ -427,11 +427,11 @@ public class ObjectController2 : MonoBehaviour
                     && !bstepsController.instance.bsteps[17 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
                         textHistory.text = "16. Goncang tabung uji B";
-                        text.text = "Klik penunu Bunsen untuk nyalakan api";
+                        text.text = "Tekan penunu Bunsen untuk nyalakan api";
                         if (TouchController2.instance.alat[7].GetChild(0).GetComponent<SelectedController>().isSelected)
                         //TouchController2.instance.alat[1].GetComponent<SelectedController>().isSelected
                         {
-                            ButtonControllers.instance.buttons[17 - 1].gameObject.SetActive(true);
+                            anim.Play("step17");
                             Untouch();
                         }
 
@@ -446,7 +446,7 @@ public class ObjectController2 : MonoBehaviour
                     if (bstepsController.instance.bsteps[18 - 1].GetCurrentAnimatorStateInfo(0).normalizedTime > 1
                     && !bstepsController.instance.bsteps[18 - 1].IsInTransition(0) && !anim.IsInTransition(0))
                     {
-                        textHistory.text = "17. Klik penunu Bunsen untuk nyalakan api";
+                        textHistory.text = "17. Tekan penunu Bunsen untuk nyalakan api";
                         text.text = "Tekan tabung uji A dan bikar kukus air";
                         if (TouchController2.instance.alat[3].GetComponent<IsCollided>().isCollide &&
                             TouchController2.instance.alat[9].GetComponent<IsCollided>().isCollide)
