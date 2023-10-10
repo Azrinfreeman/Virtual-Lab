@@ -21,7 +21,7 @@ public class LoginController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -109,22 +109,24 @@ public class LoginController : MonoBehaviour
 
 
                 //show result as text .text
-                //.Log(www.downloadHandler.text);
-                if (int.Parse(www.downloadHandler.text) > 0)
-                {
-                    PlayerPrefs.SetString("username", username);
-                    PlayerPrefs.SetInt("id_user",int.Parse(www.downloadHandler.text));
-                    SceneManager.LoadScene("MainMenu");
-
-                    Debug.Log(PlayerPrefs.GetInt("id_user"));
-                }
-                else
+                Debug.Log(www.downloadHandler.text);
+                if (www.downloadHandler.text.Equals("login invalid"))
                 {
                     errorText.gameObject.SetActive(true);
                     loadingIcon.gameObject.SetActive(false);
                 }
-                //show result as binary using []
-                //binaryData = www.downloadHandler.data;
+
+                else if (int.Parse(www.downloadHandler.text) > 0)
+                {
+                    PlayerPrefs.SetString("username", username);
+                    PlayerPrefs.SetInt("id_user", int.Parse(www.downloadHandler.text));
+                    SceneManager.LoadScene("MainMenu");
+
+                    Debug.Log(PlayerPrefs.GetInt("id_user"));
+
+                    //show result as binary using []
+                    //binaryData = www.downloadHandler.data;
+                }
             }
         }
     }

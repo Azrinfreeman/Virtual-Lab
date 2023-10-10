@@ -11158,8 +11158,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tarik picagari 1 ml ke larutan DCPIP untuk memasukkan 1 ml larutan DCPIP
-    ke dalam picagari.
+  m_text: Tarik picagari ke tiub spesimen 3 untuk memasukkan larutan DCPIP ke dalam
+    tiub spesimen 3.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -25739,6 +25739,18 @@ MonoBehaviour:
           m_StringArgument: step28
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 680138832}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &490236406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38344,7 +38356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tiub Specimen sebanyak 4
+  m_text: Tiub Specimen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8082c3bdcfd83e04795221a4e7e2abf5, type: 2}
   m_sharedMaterial: {fileID: 810378178137779810, guid: 8082c3bdcfd83e04795221a4e7e2abf5,
@@ -41273,6 +41285,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: bstep25
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 518342791}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &830744776
 MonoBehaviour:
@@ -60718,6 +60742,18 @@ MonoBehaviour:
           m_StringArgument: step24
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 129712972}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1224000949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68943,6 +68979,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: last
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1276095173}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1443704354
@@ -79744,6 +79792,18 @@ MonoBehaviour:
           m_StringArgument: bstep21
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1655389771}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1622448180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80101,6 +80161,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: step20
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1868613835}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1629874278
 MonoBehaviour:
@@ -98344,6 +98416,18 @@ MonoBehaviour:
           m_StringArgument: step16
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 395664577}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2075098058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100732,6 +100816,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: bstep17
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 469137194}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2123905082
 MonoBehaviour:

@@ -29,6 +29,10 @@ public class SceneController : MonoBehaviour
 
     }
 
+    public void Logout(){
+        PlayerPrefs.SetInt("id_user",0);
+    }
+
     public void QuitApplication()
     {
         Application.Quit();

@@ -71,11 +71,11 @@ public class LoadUserScore : MonoBehaviour
             {
 
                 //show result as text .text
-                //.Log(www.downloadHandler.text);
+                Debug.Log(www.downloadHandler.text);
                 //if it's an id 
                 if (www.downloadHandler.text == "error")
                 {
-                    text.text = "error";
+                    text.text = "0/10";
                 }
                 else
                 {
