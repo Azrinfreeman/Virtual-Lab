@@ -32,7 +32,7 @@ public class LoginController : MonoBehaviour
 
     public void Login()
     {
-
+        PlayerPrefs.SetInt("pernahjawab", 0);
         StartCoroutine(LoginUser(Domain, text[0].text, text[1].text));
         //SceneManager.LoadScene("MainMenu");
     }
