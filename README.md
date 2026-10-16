@@ -25,6 +25,8 @@ The checked-in configuration uses **Unity 2022.3.60f1**, **C#**, **Universal Ren
 
 This describes the source design. It does not establish a tested standalone demo or a measured learning outcome.
 
+Use the [scene and activity map](docs/ACTIVITY_MAP.md) to browse the seven menu/account scenes and eight activity groups directly from the source.
+
 ## Explore the implementation
 
 | Area | Source |
