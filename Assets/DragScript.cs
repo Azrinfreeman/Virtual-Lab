@@ -15,6 +15,9 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     public List<GameObject> slots;
 
     public string Answer;
+    private Transform dragOriginParent;
+    private Vector2 dragOriginPosition;
+    private int dragOriginIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,9 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        dragOriginParent = transform.parent;
+        dragOriginPosition = rectTransform.anchoredPosition;
+        dragOriginIndex = transform.GetSiblingIndex();
         Debug.Log("drag");
         if (eventData.pointerDrag.tag == "bridge")
         {
@@ -61,6 +67,14 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        // Dropping outside an answer slot must not strand an answer off screen.
+        if (eventData.pointerEnter == null ||
+            eventData.pointerEnter.GetComponentInParent<ItemSlot>() == null)
+        {
+            transform.SetParent(dragOriginParent, false);
+            transform.SetSiblingIndex(dragOriginIndex);
+            rectTransform.anchoredPosition = dragOriginPosition;
+        }
         if (eventData.pointerDrag.tag == "bridge")
         {
 

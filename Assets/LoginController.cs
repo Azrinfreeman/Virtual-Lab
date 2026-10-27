@@ -89,6 +89,10 @@ public class LoginController : MonoBehaviour
         form.AddField("_loginName", username);
         form.AddField("_loginPassword", password);
 
+        SceneManager.LoadScene("MainMenu");
+
+        yield return new WaitForSeconds(0);
+        /*
         using (UnityWebRequest www = UnityWebRequest.Post(Domain + "LoginUser.php", form))
         {
 
@@ -129,5 +133,6 @@ public class LoginController : MonoBehaviour
                 }
             }
         }
+        */
     }
 }

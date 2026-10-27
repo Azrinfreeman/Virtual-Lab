@@ -28,24 +28,22 @@ public class KuizController : MonoBehaviour
     }
 
     public void checkAnswers(){
-        //count soalan
-        
-        for(int i = 0; i < transform.childCount; i++){
+        int total = 0;
+        for(int i = 0; i < soalanAnswer.Length; i++){
             if(soalanAnswer[i]){
-                scores++;
+                total++;
             }
         }
-        
+        scores = total;
     }
     public void checkAnswers5Q(){
-        //count soalan
-        
-        for(int i = 0; i < transform.childCount; i++){
+        int total = 0;
+        for(int i = 0; i < soalanAnswer.Length; i++){
             if(soalanAnswer[i]){
-                scores +=2;
+                total +=2;
             }
         }
-        
+        scores = total;
     }
 
     // Update is called once per frame

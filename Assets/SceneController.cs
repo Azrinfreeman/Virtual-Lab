@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
+    private bool changingScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +26,17 @@ public class SceneController : MonoBehaviour
 
     public void ChangeScene(string name)
     {
+        if (changingScene) return;
+        changingScene = true;
         StartCoroutine(waits(name));
 
     }
 
     public void Logout(){
         PlayerPrefs.SetInt("id_user",0);
+        var chatbot = GameObject.Find("ChatGPT");
+        if (chatbot != null && chatbot.TryGetComponent<OpenAI.ChatGPT>(out var chat))
+            chat.SetSessionToken(null);
     }
 
     public void QuitApplication()

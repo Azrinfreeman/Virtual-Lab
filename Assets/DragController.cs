@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DragController : MonoBehaviour
 {
+    private bool pointerDragAllowed;
 
 
     public Vector3 screenPoint;
@@ -18,6 +19,9 @@ public class DragController : MonoBehaviour
 
     void OnMouseDown()
     {
+        pointerDragAllowed = UnityEngine.EventSystems.EventSystem.current == null ||
+            !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+        if (!pointerDragAllowed) return;
         //  Cursors.instance.cursors[0].gameObject.SetActive(true);
 
         //  Cursors.instance.cursors[1].gameObject.SetActive(false);
@@ -27,6 +31,7 @@ public class DragController : MonoBehaviour
 
     void OnMouseDrag()
     {
+        if (!pointerDragAllowed) return;
         if (isProcedure)
         {
             if (!isStop)
@@ -52,6 +57,7 @@ public class DragController : MonoBehaviour
 
     void OnMouseUp()
     {
+        pointerDragAllowed = false;
         // Cursors.instance.cursors[0].gameObject.SetActive(false);
 
         // Cursors.instance.cursors[1].gameObject.SetActive(true);

@@ -19,11 +19,13 @@ public class KeputusanController : MonoBehaviour
     }
 
     public void CheckAnswer(){
-        for(int i =0; i < transform.childCount; i++){
+        int total = 0;
+        for(int i =0; i < Jawapan.Length; i++){
             if(Jawapan[i]){
-                score++;
+                total++;
             }
         }
+        score = total;
     }
 
     // Update is called once per frame
