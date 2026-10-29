@@ -1,0 +1,33 @@
+{
+  "pipeline": {
+    "remotion": "4.0.539",
+    "codec": "AAC",
+    "sampleRate": 48000,
+    "container": "MP4",
+    "fps": 60
+  },
+  "probes": [
+    {
+      "targetFrame": 90,
+      "onsetOffsetSamples": -495,
+      "onsetOffsetFrames": -0.61875,
+      "peakOffsetFrames": -0.12375000000000003
+    },
+    {
+      "targetFrame": 150,
+      "onsetOffsetSamples": -495,
+      "onsetOffsetFrames": -0.61875,
+      "peakOffsetFrames": -0.12375000000000003
+    },
+    {
+      "targetFrame": 210,
+      "onsetOffsetSamples": -495,
+      "onsetOffsetFrames": -0.61875,
+      "peakOffsetFrames": -0.12375000000000003
+    }
+  ],
+  "sourcePeakLagFrames": 0.495,
+  "sourceDurationSeconds": 0.07364583333333333,
+  "maxPeakOffsetFrames": 0.12375000000000003,
+  "status": "PASS"
+}

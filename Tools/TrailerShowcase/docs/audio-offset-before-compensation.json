@@ -1,0 +1,30 @@
+{
+  "pipeline": {
+    "remotion": "4.0.539",
+    "codec": "AAC",
+    "sampleRate": 48000,
+    "container": "MP4",
+    "fps": 60
+  },
+  "probes": [
+    {
+      "targetFrame": 90,
+      "offsetSamples": 1105,
+      "offsetFrames": 1.38125
+    },
+    {
+      "targetFrame": 150,
+      "offsetSamples": 1105,
+      "offsetFrames": 1.38125
+    },
+    {
+      "targetFrame": 210,
+      "offsetSamples": 1105,
+      "offsetFrames": 1.38125
+    }
+  ],
+  "sourcePeakLagFrames": 0.495,
+  "sourceDurationSeconds": 0.07364583333333333,
+  "maxOffsetFrames": 1.38125,
+  "status": "REQUIRES_COMPENSATION"
+}
