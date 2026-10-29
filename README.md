@@ -21,6 +21,22 @@ The project includes repeat-safe scoring, corrected Healthy Plate validation, UI
 
 Watch the [60-second gameplay trailer](Deliverables/Trailer/BioNutri-MM_Gameplay_Trailer_60s.mp4). See the [production notes](Deliverables/Trailer/README.md) and [UI implementation report](Documentation/UIReview/IMPLEMENTATION_REPORT.md) for verified behaviour and outstanding work. No live backend deployment or full platform-build verification is claimed.
 
+## Preview
+
+[![Watch the 60-second BioNutri-MM gameplay showcase on YouTube](docs/images/menu.jpg)](https://youtu.be/Zpnk52QqCFI)
+
+*Click the image to watch the 60-second gameplay showcase on [YouTube](https://youtu.be/Zpnk52QqCFI). Lab animations are simulations and some starting states are staged for the video; menu, plate and quiz footage uses the real game. An earlier cut is kept in [Deliverables/Trailer](Deliverables/Trailer/README.md).*
+
+| Activity menu | Step-by-step lab experiment |
+| --- | --- |
+| ![Activity menu with eight activities](docs/images/menu.jpg) | ![Lab experiment with step instructions](docs/images/lab-experiment.jpg) |
+| **Digestive system** | **Healthy Plate** |
+| ![Human digestive system labels](docs/images/anatomy.jpg) | ![Pinggan Sihat Malaysia matching](docs/images/healthy-plate.jpg) |
+| **Quiz** | **Results review** |
+| ![Quiz question with options](docs/images/quiz.jpg) | ![Score review screen](Documentation/AnimationUIReview/score-review-after.png) |
+
+Colour and feedback design (right/wrong shown with words as well as colour) is checked under colour-blindness simulation: see the [colour-vision review](Documentation/AnimationUIReview/quiz-feedback-after-colour-review.png) and the [colour plan](COLOR_IMPLEMENTATION_PLAN.md).
+
 ## Learning flow
 
 1. Start from the entry menu and use the account flow with an isolated test backend.
