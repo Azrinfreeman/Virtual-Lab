@@ -1,100 +1,152 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+
+public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
+    IEndDragHandler, IDragHandler, IPointerClickHandler, ISubmitHandler, ICancelHandler
 {
-
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private BoxCollider2D colider;
-
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
-
-    [Header("4 slots")]
+    [SerializeField] Canvas canvas;
+    [SerializeField] BoxCollider2D colider;
     public List<GameObject> slots;
-
     public string Answer;
-    private Transform dragOriginParent;
-    private Vector2 dragOriginPosition;
-    private int dragOriginIndex;
-    // Start is called before the first frame update
-    void Start()
+    RectTransform rectTransform;
+    CanvasGroup canvasGroup;
+    Transform dragOriginParent;
+    Vector2 dragOriginPosition, originAnchorMin, originAnchorMax, originPivot;
+    int dragOriginIndex;
+    float restAlpha;
+    bool restRaycasts, dragging, accepted, bridge;
+    Coroutine returning;
+    public ItemSlot CurrentSlot { get; private set; }
+    public static DragScript PickedItem { get; private set; }
+
+    void Awake()
     {
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
-        colider = GetComponent<BoxCollider2D>();
+        if (canvasGroup == null) canvasGroup = gameObject.AddComponent<CanvasGroup>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void BeginPickup()
     {
-
-    }
-
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        dragOriginParent = transform.parent;
-        dragOriginPosition = rectTransform.anchoredPosition;
-        dragOriginIndex = transform.GetSiblingIndex();
-        Debug.Log("drag");
-        if (eventData.pointerDrag.tag == "bridge")
+        bool resumingReturn = returning != null;
+        if (returning != null) { StopCoroutine(returning); returning = null; }
+        if (dragging) return;
+        if (!resumingReturn)
         {
-            Debug.Log("asfasf");
-            for (int i = 0; i < slots.Count; i++)
-            {
-                slots[i].SetActive(false);
-            }
+            dragOriginParent = transform.parent;
+            dragOriginPosition = rectTransform.anchoredPosition;
+            dragOriginIndex = transform.GetSiblingIndex();
+            originAnchorMin = rectTransform.anchorMin;
+            originAnchorMax = rectTransform.anchorMax;
+            originPivot = rectTransform.pivot;
         }
-        //  Debug.Log("OnBeginDrag");
-        canvasGroup.alpha = .6f;
+        restAlpha = canvasGroup.alpha;
+        restRaycasts = canvasGroup.blocksRaycasts;
+        dragging = true;
+        accepted = false;
+        bridge = tag == "bridge";
+        SetBridgeSlots(false);
+        canvasGroup.alpha = .72f;
+    }
+    public void OnBeginDrag(PointerEventData e)
+    {
+        if (!BioModal.Allows(transform)) return;
+        if (PickedItem != null && PickedItem != this) PickedItem.FinishPickup();
+        if (PickedItem == this) PickedItem = null;
+        BeginPickup();
         canvasGroup.blocksRaycasts = false;
-
-
-
     }
-
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData e)
     {
-
-
-        //Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-
+        if (!dragging || !BioModal.Allows(transform)) return;
+        var parent = transform.parent as RectTransform;
+        if (parent == null) return;
+        // Convert screen motion into the actual parent canvas, including nested transforms.
+        Vector2 from, to;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, e.position - e.delta, e.pressEventCamera, out from) &&
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, e.position, e.pressEventCamera, out to))
+            rectTransform.anchoredPosition += to - from;
     }
-
-    public void OnEndDrag(PointerEventData eventData)
+    public void Accept(ItemSlot slot) { CurrentSlot = slot; accepted = true; }
+    public void OnEndDrag(PointerEventData e) => FinishPickup();
+    public void FinishPickup()
     {
-        // Dropping outside an answer slot must not strand an answer off screen.
-        if (eventData.pointerEnter == null ||
-            eventData.pointerEnter.GetComponentInParent<ItemSlot>() == null)
+        if (!dragging) return;
+        if (PickedItem == this) PickedItem = null;
+        dragging = false;
+        SetBridgeSlots(true);
+        canvasGroup.alpha = restAlpha;
+        canvasGroup.blocksRaycasts = restRaycasts;
+        if (accepted) return;
+        Vector3 world = rectTransform.position;
+        transform.SetParent(dragOriginParent, false);
+        transform.SetSiblingIndex(dragOriginIndex);
+        rectTransform.anchorMin = originAnchorMin;
+        rectTransform.anchorMax = originAnchorMax;
+        rectTransform.pivot = originPivot;
+        if (BioMotion.Reduced || !Application.isPlaying || !isActiveAndEnabled)
+            rectTransform.anchoredPosition = dragOriginPosition;
+        else
         {
-            transform.SetParent(dragOriginParent, false);
-            transform.SetSiblingIndex(dragOriginIndex);
+            rectTransform.position = world;
+            returning = StartCoroutine(ReturnHome());
+        }
+    }
+    IEnumerator ReturnHome()
+    {
+        Vector2 from = rectTransform.anchoredPosition;
+        for (float t = 0; t < .16f; t += Time.unscaledDeltaTime)
+        {
+            rectTransform.anchoredPosition = Vector2.LerpUnclamped(from, dragOriginPosition, BioMotion.Ease(t / .16f));
+            yield return null;
+        }
+        rectTransform.anchoredPosition = dragOriginPosition;
+        returning = null;
+    }
+    void SetBridgeSlots(bool value)
+    {
+        if (!bridge || slots == null) return;
+        foreach (var slot in slots) if (slot != null) slot.SetActive(value);
+    }
+    void Pick()
+    {
+        if (!BioModal.Allows(transform)) return;
+        if (PickedItem == this) { FinishPickup(); return; }
+        if (PickedItem != null) PickedItem.FinishPickup();
+        BeginPickup();
+        PickedItem = this;
+    }
+    public void OnPointerDown(PointerEventData e) { }
+    public void OnPointerClick(PointerEventData e)
+    {
+        if (e.button == PointerEventData.InputButton.Left && !e.dragging) Pick();
+    }
+    public void OnSubmit(BaseEventData e) => Pick();
+    public void OnCancel(BaseEventData e) => FinishPickup();
+    void OnDisable()
+    {
+        if (returning != null)
+        {
+            StopCoroutine(returning);
             rectTransform.anchoredPosition = dragOriginPosition;
         }
-        if (eventData.pointerDrag.tag == "bridge")
+        returning = null;
+        if (dragging)
         {
-
-            for (int i = 0; i < slots.Count; i++)
+            dragging = false;
+            SetBridgeSlots(true);
+            if (canvasGroup != null) { canvasGroup.alpha = restAlpha; canvasGroup.blocksRaycasts = restRaycasts; }
+            if (!accepted && dragOriginParent != null)
             {
-                slots[i].SetActive(true);
+                transform.SetParent(dragOriginParent, false);
+                transform.SetSiblingIndex(dragOriginIndex);
+                rectTransform.anchorMin = originAnchorMin; rectTransform.anchorMax = originAnchorMax;
+                rectTransform.pivot = originPivot; rectTransform.anchoredPosition = dragOriginPosition;
             }
         }
-        //   Debug.Log("OnEndDrag");
-        canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true;
-
-
-
+        if (PickedItem == this) PickedItem = null;
     }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        //    Debug.Log("OnPointerDown");
-    }
-
-
+    void OnDestroy() { if (CurrentSlot != null) CurrentSlot.Release(this); }
 }

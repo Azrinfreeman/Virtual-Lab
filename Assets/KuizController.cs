@@ -14,6 +14,9 @@ public class KuizController : MonoBehaviour
     public int numSoalan;
 
     public bool[] soalanAnswer;
+    public TMPro.TMP_Text statusLabel;
+    int currentQuestion;
+    bool feedbackShown;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,11 @@ public class KuizController : MonoBehaviour
         }
 
         soalanAnswer = new bool[transform.childCount];
+        foreach (var field in GetComponentsInChildren<TMPro.TMP_InputField>(true))
+            field.onValueChanged.AddListener(OnAnswerEdited);
+        foreach (var toggle in GetComponentsInChildren<Toggle>(true))
+            toggle.onValueChanged.AddListener(OnToggleEdited);
+        UpdateStatus();
     }
 
     public void checkAnswers(){
@@ -49,15 +57,46 @@ public class KuizController : MonoBehaviour
     }
 
     void ShowResults(){
+        feedbackShown = true;
         foreach(var options in GetComponentsInChildren<ButtonAnswers>(true)){
             options.ShowResult();
         }
         // Every question type (options, drag-and-drop, typed, tick boxes) feeds soalanAnswer,
         // so a per-question badge gives right/wrong feedback for all of them.
+        if (statusLabel != null) { UpdateStatus(); return; }
+        if (NoSoalan == null) return;
         for(int i = 0; i < NoSoalan.Length && i < soalanAnswer.Length; i++){
             ShowBadge(NoSoalan[i], soalanAnswer[i]);
         }
     }
+
+    void OnAnswerEdited(string value) => ClearFeedback();
+    void OnToggleEdited(bool value) => ClearFeedback();
+    public void SetCurrentQuestion(int index) { currentQuestion = index; UpdateStatus(); }
+    public void ClearFeedback()
+    {
+        if (!feedbackShown) return;
+        feedbackShown = false;
+        foreach (var options in GetComponentsInChildren<ButtonAnswers>(true)) options.ResetResults();
+        if (NoSoalan != null) foreach (var question in NoSoalan)
+        {
+            var badge = question.Find("ResultBadge");
+            if (badge != null) badge.gameObject.SetActive(false);
+        }
+        UpdateStatus();
+    }
+    void UpdateStatus()
+    {
+        if (statusLabel == null) return;
+        int count = soalanAnswer == null ? transform.childCount : soalanAnswer.Length;
+        statusLabel.text = "Soalan " + (currentQuestion + 1) + " / " + count;
+        statusLabel.color = BioPalette.TextSecondary;
+        if (!feedbackShown || soalanAnswer == null || currentQuestion >= soalanAnswer.Length) return;
+        bool correct = soalanAnswer[currentQuestion];
+        statusLabel.text += correct ? "  ·  Betul" : "  ·  Salah";
+        statusLabel.color = correct ? BioPalette.Success : BioPalette.Error;
+    }
+    void OnDestroy() { if (instance == this) instance = null; }
 
     // Green "Betul" / red "Salah" chip at the question's top-right. Word + colour, never colour alone.
     static void ShowBadge(Transform question, bool correct){

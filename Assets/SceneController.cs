@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
-    private bool changingScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,18 +16,9 @@ public class SceneController : MonoBehaviour
 
     }
 
-    IEnumerator waits(string name)
-    {
-
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(name);
-    }
-
     public void ChangeScene(string name)
     {
-        if (changingScene) return;
-        changingScene = true;
-        StartCoroutine(waits(name));
+        BioSceneTransition.Load(name);
 
     }
 

@@ -86,6 +86,9 @@ public class TouchController : MonoBehaviour
     {
 
 
+        if (BioModal.HasOpenModal ||
+            (UnityEngine.EventSystems.EventSystem.current != null &&
+             UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())) return;
         if (Input.GetMouseButtonDown(0))
         {
             Ray raycast = Camera.main.ScreenPointToRay(Input.mousePosition);

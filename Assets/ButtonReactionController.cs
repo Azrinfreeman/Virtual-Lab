@@ -1,58 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
 public class ButtonReactionController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Button button;
-    private bool confirming;
-    private bool focused;
-    // Start is called before the first frame update
+    bool confirming, focused, hovered;
+    Animator animator;
+    void Awake() => animator = GetComponent<Animator>();
     void Start()
     {
-        button = transform.GetChild(0).GetComponent<Button>();
-        button.onClick.AddListener(() =>
-        {
-            if (!confirming) StartCoroutine(confirmPlay());
-        });
+        if (button == null) button = GetComponentInChildren<Button>(true);
+        if (button != null) button.onClick.AddListener(Confirm);
     }
-    IEnumerator confirmPlay()
+    void OnEnable() => BioMotion.Changed += Refresh;
+    void Confirm()
+    {
+        if (!confirming && !BioMotion.Reduced && transform.childCount > 2)
+            StartCoroutine(ConfirmPlay());
+    }
+    IEnumerator ConfirmPlay()
     {
         confirming = true;
-        transform.GetChild(2).GetComponent<Transform>().gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        transform.GetChild(2).GetComponent<Transform>().gameObject.SetActive(false);
+        transform.GetChild(2).gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(.2f);
+        transform.GetChild(2).gameObject.SetActive(false);
         confirming = false;
-
-
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetFocus(bool value)
     {
-        bool selected = EventSystem.current != null && button != null &&
-            EventSystem.current.currentSelectedGameObject == button.gameObject;
-        if (selected != focused)
+        if (focused == value) return;
+        focused = value;
+        Refresh();
+    }
+    void Refresh()
+    {
+        if (animator == null || !animator.isActiveAndEnabled) return;
+        animator.Play(!BioMotion.Reduced && (hovered || focused) ? "hover" : "idle");
+        if (BioMotion.Reduced)
         {
-            focused = selected;
-            GetComponent<Animator>().Play(focused ? "hover" : "idle");
+            animator.Update(0);
+            if (transform.childCount > 2) transform.GetChild(2).gameObject.SetActive(false);
         }
     }
-    void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
-    {
-        GetComponent<Animator>().Play("hover");
-    }
-
-    void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
-    {
-        if (!focused) GetComponent<Animator>().Play("idle");
-    }
+    public void OnPointerEnter(PointerEventData e) { hovered = true; Refresh(); }
+    public void OnPointerExit(PointerEventData e) { hovered = false; Refresh(); }
     void OnDisable()
     {
+        BioMotion.Changed -= Refresh;
         StopAllCoroutines();
-        confirming = false;
-        focused = false;
+        confirming = focused = hovered = false;
         if (transform.childCount > 2) transform.GetChild(2).gameObject.SetActive(false);
     }
+    void OnDestroy() { if (button != null) button.onClick.RemoveListener(Confirm); }
 }

@@ -1,22 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+
 public class updatePercentage : MonoBehaviour
 {
     public Slider slider;
     public TextMeshProUGUI text;
-    // Start is called before the first frame update
     void Start()
     {
-        slider = GameObject.Find("Slider").GetComponent<Slider>();
         text = GetComponent<TextMeshProUGUI>();
+        // Lab progress owns its label; do not compete with its final-value announcement.
+        if (GetComponentInParent<ProgressController>() != null) return;
+        if (slider == null) slider = GetComponentInParent<Slider>();
+        if (slider == null) return;
+        slider.onValueChanged.AddListener(Refresh);
+        Refresh(slider.value);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        text.text = slider.value.ToString()+ " %";
-    }
+    void Refresh(float value) { if (text != null) text.text = value.ToString("0") + " %"; }
+    void OnDestroy() { if (slider != null) slider.onValueChanged.RemoveListener(Refresh); }
 }

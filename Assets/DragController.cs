@@ -19,8 +19,8 @@ public class DragController : MonoBehaviour
 
     void OnMouseDown()
     {
-        pointerDragAllowed = UnityEngine.EventSystems.EventSystem.current == null ||
-            !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+        pointerDragAllowed = !BioModal.HasOpenModal && (UnityEngine.EventSystems.EventSystem.current == null ||
+            !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject());
         if (!pointerDragAllowed) return;
         //  Cursors.instance.cursors[0].gameObject.SetActive(true);
 
@@ -31,7 +31,7 @@ public class DragController : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (!pointerDragAllowed) return;
+        if (!pointerDragAllowed || BioModal.HasOpenModal) return;
         if (isProcedure)
         {
             if (!isStop)
@@ -65,6 +65,7 @@ public class DragController : MonoBehaviour
 
     void Update()
     {
+        if (BioModal.HasOpenModal) return;
         if (Input.GetKey(KeyCode.W))
         {
             isW = true;

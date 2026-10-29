@@ -6,8 +6,53 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IDropHandler
+public class ItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, ISubmitHandler
 {
+    public DragScript Occupant { get; private set; }
+    public bool CanAccept(DragScript item)
+    {
+        if (item == null || !BioModal.Allows(transform) || !item.isActiveAndEnabled ||
+            (Occupant != null && Occupant != item)) return false;
+        string scene = gameObject.scene.name;
+        if (scene == "2.4" || scene == "3.4" || scene == "5.4" || scene == "8.2") return true;
+        if (scene == "4.4" || scene == "7.4") return item.tag != "panel";
+        return scene == "8.1" && item.tag != "Untagged";
+    }
+    public bool TryPlace(DragScript item)
+    {
+        if (!CanAccept(item) || EventSystem.current == null) return false;
+        OnDrop(new PointerEventData(EventSystem.current) { pointerDrag = item.gameObject });
+        return Occupant == item;
+    }
+    public void Release(DragScript item)
+    {
+        if (Occupant != item) return;
+        Occupant = null;
+        string scene = gameObject.scene.name;
+        if (scene == "2.4" || scene == "3.4" || scene == "5.4") answerStore = "";
+        var pyramid = GetComponent<PiramidJawapan>();
+        if (pyramid != null) pyramid.jawapanName = "";
+        var plate = GetComponent<PingganName>();
+        if (plate != null) plate.plateName = "";
+        int question;
+        if ((scene == "4.4" || scene == "7.4") && KuizController.instance != null &&
+            transform.parent != null && transform.parent.parent != null &&
+            int.TryParse(transform.parent.parent.name, out question) && question > 0 &&
+            KuizController.instance.soalanAnswer != null && question <= KuizController.instance.soalanAnswer.Length)
+            KuizController.instance.soalanAnswer[question-1] = false;
+    }
+    public void OnPointerClick(PointerEventData e)
+    {
+        if (e.button == PointerEventData.InputButton.Left) PlacePickedItem();
+    }
+    public void OnSubmit(BaseEventData e) => PlacePickedItem();
+    void PlacePickedItem()
+    {
+        var item = DragScript.PickedItem;
+        if (item == null) return;
+        TryPlace(item);
+        item.FinishPickup();
+    }
     public string answerStore;
 
     public string answerStore2;
@@ -16,7 +61,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     // Start is called before the first frame update
     void Start()
     {
-        slotInsertedAudio = GameObject.Find("SlotInserted").GetComponent<AudioSource>();
+        var audioObject = GameObject.Find("SlotInserted");
+        if (audioObject != null) slotInsertedAudio = audioObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,9 +70,10 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("drop");
+        var item = eventData.pointerDrag == null ? null : eventData.pointerDrag.GetComponent<DragScript>();
+        if (!CanAccept(item)) return;
         //scene 3.4
-        if (SceneManager.GetActiveScene().name == "3.4")
+        if (gameObject.scene.name == "3.4")
         {
             if (eventData.pointerDrag.tag == "temprotein")
             {
@@ -45,7 +92,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 GetComponent<RectTransform>().anchoredPosition;
         }
         //scene 4.4
-        else if (SceneManager.GetActiveScene().name == "2.4")
+        else if (gameObject.scene.name == "2.4")
         {
             if (eventData.pointerDrag.tag == "tempButton1")
             {
@@ -68,11 +115,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 GetComponent<RectTransform>().anchoredPosition;
         }
         else if (
-            SceneManager.GetActiveScene().name == "4.4"
+            gameObject.scene.name == "4.4"
             && eventData.pointerDrag.tag != "panel"
         )
         {
-            if (!slotInsertedAudio.isPlaying)
+            if (slotInsertedAudio != null && !slotInsertedAudio.isPlaying)
             {
                 slotInsertedAudio.Play();
             }
@@ -157,9 +204,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 ] = false;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "5.4")
+        else if (gameObject.scene.name == "5.4")
         {
-            if (!slotInsertedAudio.isPlaying)
+            if (slotInsertedAudio != null && !slotInsertedAudio.isPlaying)
             {
                 slotInsertedAudio.Play();
             } //set pivot
@@ -183,9 +230,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
                 GetComponent<RectTransform>().anchoredPosition;
         }
-        else if (SceneManager.GetActiveScene().name == "7.4" & eventData.pointerDrag.tag != "panel")
+        else if (gameObject.scene.name == "7.4" & eventData.pointerDrag.tag != "panel")
         {
-            if (!slotInsertedAudio.isPlaying)
+            if (slotInsertedAudio != null && !slotInsertedAudio.isPlaying)
             {
                 slotInsertedAudio.Play();
             }
@@ -278,12 +325,12 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 ] = false;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "8.1")
+        else if (gameObject.scene.name == "8.1")
         {
             //set pivot
             if (eventData.pointerDrag.tag != "Untagged")
             {
-                if (!slotInsertedAudio.isPlaying)
+                if (slotInsertedAudio != null && !slotInsertedAudio.isPlaying)
                 {
                     slotInsertedAudio.Play();
                 }
@@ -400,9 +447,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 return;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "8.2")
+        else if (gameObject.scene.name == "8.2")
         {
-            if (!slotInsertedAudio.isPlaying)
+            if (slotInsertedAudio != null && !slotInsertedAudio.isPlaying)
             {
                 slotInsertedAudio.Play();
             }
@@ -452,5 +499,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
                 GetComponent<RectTransform>().anchoredPosition;
         }
+        if (item.CurrentSlot != null && item.CurrentSlot != this) item.CurrentSlot.Release(item);
+        Occupant = item;
+        item.Accept(this);
+        // World position is correct even when the item and target have different parents/anchors.
+        item.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
+        if (KuizController.instance != null) KuizController.instance.ClearFeedback();
     }
 }

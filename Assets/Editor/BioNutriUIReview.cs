@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public static class BioNutriUIReview
 {
-    public static void Capture(string path, string output, int width, int height)
+    public static void Capture(string path, string output, int width, int height, string panelPath = null)
     {
         var scene = EditorSceneManager.OpenPreviewScene(path);
         RenderTexture rt = null;
@@ -16,6 +16,20 @@ public static class BioNutriUIReview
         var previous = RenderTexture.active;
         try
         {
+            if (!string.IsNullOrEmpty(panelPath))
+            {
+                var panel = scene.GetRootGameObjects().SelectMany(r=>r.GetComponentsInChildren<Transform>(true))
+                    .First(t=>UnityEditor.AnimationUtility.CalculateTransformPath(t,null) == panelPath);
+                panel.gameObject.SetActive(true);
+                var group = panel.GetComponent<CanvasGroup>();
+                if (group != null) group.interactable = group.blocksRaycasts = true;
+                var animator = panel.GetComponent<Animator>();
+                if (animator != null && animator.runtimeAnimatorController != null)
+                {
+                    var clip = animator.runtimeAnimatorController.animationClips.FirstOrDefault(c=>c.name == "popupPrompt");
+                    if (clip != null) clip.SampleAnimation(panel.gameObject,clip.length);
+                }
+            }
             var go = new GameObject("UI review camera", typeof(Camera));
             UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go, scene);
             var camera = go.GetComponent<Camera>();

@@ -421,6 +421,8 @@ GameObject:
   - component: {fileID: 301490288}
   - component: {fileID: 301490289}
   - component: {fileID: 301490290}
+  - component: {fileID: 301490292}
+  - component: {fileID: 301490291}
   m_Layer: 5
   m_Name: button
   m_TagString: Untagged
@@ -637,6 +639,35 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &301490291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301490283}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 0
+--- !u!114 &301490292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301490283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f1115506279c34ba6d99695e8d9d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BioControlFeedback
+  focusOutline: {fileID: 301490291}
+  motionTarget: {fileID: 1257228665}
 --- !u!1 &422744707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1490,7 @@ GameObject:
   - component: {fileID: 1152628252}
   - component: {fileID: 1152628254}
   - component: {fileID: 1152628253}
+  - component: {fileID: 1152628255}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1533,6 +1565,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152628251}
   m_CullTransparentMesh: 1
+--- !u!114 &1152628255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152628251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6daa7b80c8352949ba90b3bfa909701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BioSafeArea
 --- !u!1 &1236032822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,6 +2485,7 @@ GameObject:
   - component: {fileID: 1969554971}
   - component: {fileID: 1969554970}
   - component: {fileID: 1969554974}
+  - component: {fileID: 1969554975}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2544,6 +2589,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a2e59bb95e36442a6ca461ce7acc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1969554975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969554969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123f2bd10a5d2f34c8389464f59f6457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BioScreenFocus
+  defaultControl: {fileID: 301490285}
 --- !u!1 &2047636566
 GameObject:
   m_ObjectHideFlags: 0

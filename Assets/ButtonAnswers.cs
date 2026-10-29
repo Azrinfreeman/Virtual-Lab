@@ -20,6 +20,7 @@ public class ButtonAnswers : MonoBehaviour
     }
     bool initialised;
     bool resultShown;
+    string[] originalLabels;
 
     void Start()
     {
@@ -36,9 +37,12 @@ public class ButtonAnswers : MonoBehaviour
 
         NoButtons = new Transform[transform.childCount];
         tickImage = new Transform[transform.childCount];
+        originalLabels = new string[transform.childCount];
         for(int i = 0; i < transform.childCount;i++){
             NoButtons[i] = transform.GetChild(i).transform.GetComponent<Transform>();
             tickImage[i] = transform.GetChild(i).transform.GetChild(1).transform.GetComponent<Transform>();
+            var originalLabel = NoButtons[i].GetComponentInChildren<TMPro.TMP_Text>(true);
+            originalLabels[i] = originalLabel == null ? "" : originalLabel.text;
 
             
         
@@ -76,6 +80,8 @@ public class ButtonAnswers : MonoBehaviour
 
     // Marks one option as chosen. Violet = "my choice"; red/green are reserved for evaluated results.
     void SetSelected(int index){
+        Init();
+        if (KuizController.instance != null) KuizController.instance.ClearFeedback();
         for(int l = 0; l < transform.childCount; l++){
             bool chosen = l == index;
             NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = chosen;
@@ -117,6 +123,22 @@ public class ButtonAnswers : MonoBehaviour
             var label = NoButtons[l].GetComponentInChildren<TMPro.TMP_Text>(true);
             if(label != null) label.text += correct ? "  - Betul" : "  - Salah";
             tickImage[l].gameObject.SetActive(false);
+        }
+    }
+
+    public void ResetResults()
+    {
+        if (!initialised || !resultShown) return;
+        resultShown = false;
+        for (int i = 0; i < NoButtons.Length; i++)
+        {
+            bool chosen = NoButtons[i].GetComponent<ButtonBehaviour>().hasClicked;
+            var colors = defaultColor;
+            if (chosen) colors.normalColor = colors.selectedColor = BioPalette.Select;
+            NoButtons[i].GetComponent<Button>().colors = colors;
+            tickImage[i].gameObject.SetActive(chosen);
+            var label = NoButtons[i].GetComponentInChildren<TMPro.TMP_Text>(true);
+            if (label != null) label.text = originalLabels[i];
         }
     }
 
