@@ -18,9 +18,19 @@ public class ButtonAnswers : MonoBehaviour
     public void Wrong(){
         KuizController.instance.soalanAnswer[transform.parent.GetSiblingIndex()] = false;
     }
-    // Start is called before the first frame update
+    bool initialised;
+    bool resultShown;
+
     void Start()
     {
+        Init();
+    }
+
+    // Also called lazily: questions on hidden pages never get Start before the quiz is checked.
+    void Init()
+    {
+        if(initialised) return;
+        initialised = true;
        
 
 
@@ -64,79 +74,52 @@ public class ButtonAnswers : MonoBehaviour
 
 
 
-    public void ButtonClicked1(){
-
-
-
-
+    // Marks one option as chosen. Violet = "my choice"; red/green are reserved for evaluated results.
+    void SetSelected(int index){
         for(int l = 0; l < transform.childCount; l++){
-            
-        
-            
-            if(l == 0){
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = true;
-                tickImage[l].gameObject.SetActive(true);
-                colorBlock.normalColor = Color.red;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }else{
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = false;
-                tickImage[l].gameObject.SetActive(false);
-                colorBlock= defaultColor;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
+            bool chosen = l == index;
+            NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = chosen;
+            tickImage[l].gameObject.SetActive(chosen);
+            colorBlock = defaultColor;
+            if(chosen){
+                colorBlock.normalColor = BioPalette.Select;
+                colorBlock.selectedColor = BioPalette.Select;
             }
-        
-        }
-    }
-    public void ButtonClicked2(){
-
-        for(int l = 0; l < transform.childCount; l++){
-            if(l == 1){
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = true;
-                tickImage[l].gameObject.SetActive(true);
-                colorBlock.normalColor = Color.red;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }else{
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = false;
-                tickImage[l].gameObject.SetActive(false);
-                colorBlock= defaultColor;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }
+            NoButtons[l].GetComponent<Button>().colors = colorBlock;
         }
     }
 
-    public void ButtonClicked3(){
+    public void ButtonClicked1(){ SetSelected(0); }
+    public void ButtonClicked2(){ SetSelected(1); }
+    public void ButtonClicked3(){ SetSelected(2); }
+    public void ButtonClicked4(){ SetSelected(3); }
 
+    /// <summary>
+    /// Shown once the quiz is checked. Green + "Betul" marks the right option; red + "Salah" marks a wrong choice.
+    /// Colour is paired with a word, so it never carries the meaning alone.
+    /// </summary>
+    public void ShowResult(){
+        Init();
+        if(resultShown) return;
+        resultShown = true;
         for(int l = 0; l < transform.childCount; l++){
-            if(l == 2){
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = true;
-                tickImage[l].gameObject.SetActive(true);
-                colorBlock.normalColor = Color.red;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }else{
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = false;
-                tickImage[l].gameObject.SetActive(false);
-                colorBlock= defaultColor;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }
+            bool correct = transform.GetChild(l).GetComponent<CorrectAnswer>() != null;
+            bool chosen = NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked;
+            if(!correct && !chosen) continue;
+
+            Color tint = correct ? BioPalette.Success : BioPalette.Error;
+            colorBlock = defaultColor;
+            colorBlock.normalColor = tint;
+            colorBlock.highlightedColor = tint;
+            colorBlock.selectedColor = tint;
+            NoButtons[l].GetComponent<Button>().colors = colorBlock;
+
+            var label = NoButtons[l].GetComponentInChildren<TMPro.TMP_Text>(true);
+            if(label != null) label.text += correct ? "  - Betul" : "  - Salah";
+            tickImage[l].gameObject.SetActive(false);
         }
     }
 
-    public void ButtonClicked4(){
-
-        for(int l = 0; l < transform.childCount; l++){
-            if(l == 3){
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = true;
-                tickImage[l].gameObject.SetActive(true);
-                colorBlock.normalColor = Color.red;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }else{
-                NoButtons[l].GetComponent<ButtonBehaviour>().hasClicked = false;
-                tickImage[l].gameObject.SetActive(false);
-                colorBlock= defaultColor;
-                NoButtons[l].GetComponent<Button>().colors = colorBlock;
-            }
-        }
-    }
     // Update is called once per frame
     void Update()
     {
