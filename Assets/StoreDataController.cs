@@ -26,6 +26,11 @@ public class StoreDataController : MonoBehaviour
 
     public IEnumerator InsertKuiz1(string Domain, int score, int no)
     {
+#if UNITY_WEBGL
+        PlayerPrefs.SetInt("web-quiz-" + no, score);
+        PlayerPrefs.Save();
+        yield break;
+#else
 
         WWWForm form = new WWWForm();
         form.AddField("_userid", PlayerPrefs.GetInt("id_user"));
@@ -57,5 +62,6 @@ public class StoreDataController : MonoBehaviour
                 //binaryData = www.downloadHandler.data;
             }
         }
+#endif
     }
 }

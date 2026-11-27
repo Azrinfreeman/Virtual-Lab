@@ -33,13 +33,18 @@ public class LoginController : MonoBehaviour
     public void Login()
     {
         PlayerPrefs.SetInt("pernahjawab", 0);
+#if UNITY_WEBGL
+        SceneManager.LoadScene("MainMenu");
+#else
         StartCoroutine(LoginUser(Domain, text[0].text, text[1].text));
-        //SceneManager.LoadScene("MainMenu");
+#endif
     }
 
     public void InsertKuizEks()
     {
+#if !UNITY_WEBGL
         StartCoroutine(InsertKuizAndEks(Domain, text[0].text));
+#endif
     }
 
     IEnumerator InsertKuizAndEks(string Domain, string username)

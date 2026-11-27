@@ -27,6 +27,11 @@ public class StoreEksController : MonoBehaviour
     }
     IEnumerator InsertEks(string Domain, int score, int no)
     {
+#if UNITY_WEBGL
+        PlayerPrefs.SetInt("web-experiment-" + no, score);
+        PlayerPrefs.Save();
+        yield break;
+#else
         WWWForm form = new WWWForm();
         form.AddField("_userid", PlayerPrefs.GetInt("id_user"));
         form.AddField("_userScore", score);
@@ -60,5 +65,6 @@ public class StoreEksController : MonoBehaviour
                 //binaryData = www.downloadHandler.data;
             }
         }
+#endif
     }
 }

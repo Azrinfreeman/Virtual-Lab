@@ -65,6 +65,13 @@ Use the [scene and activity map](docs/ACTIVITY_MAP.md) to browse the seven menu/
 
 ## Open the project
 
+For a browser demo, install Web Build Support for the project's Unity version,
+switch the target to Web, and choose **Tools → Portfolio → Build Web Demo**. The
+build is written to `Build/PortfolioWeb`. It opens at the activity menu.
+Quiz and experiment scores are saved in browser storage, and the tutor uses
+prewritten Malay replies from `ChatGPT.DemoAnswer`. The browser demo opens
+without a server account.
+
 1. Clone or download the **complete repository**, including `Assets`, `Packages`, `ProjectSettings`, and Unity `.meta` files. A source-only checkout is sufficient for reading code but not for importing or running the application.
 2. Add the repository root in Unity Hub and open it with **6000.6.7f1**, as recorded in [ProjectVersion.txt](ProjectSettings/ProjectVersion.txt). Avoid an editor upgrade during the first inspection.
 3. Let Unity import assets and resolve the versions in [manifest.json](Packages/manifest.json) and [packages-lock.json](Packages/packages-lock.json).

@@ -39,6 +39,9 @@ public class WebController : MonoBehaviour
 
     public void InsertUser()
     {
+#if UNITY_WEBGL
+        BioSceneTransition.Load("MainMenu");
+#else
         //assign
         username = textField[0].text;
         email = textField[1].text;
@@ -46,6 +49,7 @@ public class WebController : MonoBehaviour
         password2 = textField[3].text;
         //Debug.Log(username);
         StartCoroutine(InsertUser(Domain, username, email, password, password2));
+#endif
     }
 
     IEnumerator InsertUser(string Domain, string username, string email, string password, string password2)
