@@ -67,10 +67,10 @@ Use the [scene and activity map](docs/ACTIVITY_MAP.md) to browse the seven menu/
 
 For a browser demo, install Web Build Support for the project's Unity version,
 switch the target to Web, and choose **Tools → Portfolio → Build Web Demo**. The
-build is written to `Build/PortfolioWeb`. It opens at the activity menu.
-Quiz and experiment scores are saved in browser storage, and the tutor uses
-prewritten Malay replies from `ChatGPT.DemoAnswer`. The browser demo opens
-without a server account.
+build is written to `Build/PortfolioWeb`. It opens at the main menu.
+Open the demo in its own browser tab to save quiz and experiment scores. The
+tutor uses prewritten Malay replies from `ChatGPT.DemoAnswer`. The browser demo
+opens without a server account.
 
 ### Publish to GitHub Pages
 
