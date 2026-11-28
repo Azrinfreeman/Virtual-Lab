@@ -24,6 +24,18 @@ namespace OpenAI
         private bool sending;
         private UnityWebRequest activeRequest;
 
+        private bool UseScriptedReplies
+        {
+            get
+            {
+#if UNITY_WEBGL
+                return true;
+#else
+                return offlineDemoMode;
+#endif
+            }
+        }
+
         [Serializable] private class ChatRequest
         {
             public string contextId, message, conversationId, requestId;
@@ -46,7 +58,7 @@ namespace OpenAI
         {
             button.onClick.AddListener(SendReply);
             ChangePrompt();
-            if (offlineDemoMode) AppendMessage("DEMO LUAR TALIAN - jawapan contoh", false);
+            if (UseScriptedReplies) AppendMessage("DEMO LUAR TALIAN - jawapan contoh", false);
         }
 
         public void SetOfflineDemoMode(bool enabled)
@@ -114,7 +126,7 @@ namespace OpenAI
         {
             if (sending || string.IsNullOrWhiteSpace(inputField.text)) return;
             if (inputField.text.Length > 2000) return;
-            if (offlineDemoMode)
+            if (UseScriptedReplies)
             {
                 StartCoroutine(DemoReply(inputField.text.Trim()));
                 return;
@@ -205,7 +217,7 @@ namespace OpenAI
             StopAllCoroutines();
             activeRequest = null;
             sending = false;
-            if (offlineDemoMode && inputField != null) inputField.text = "";
+            if (UseScriptedReplies && inputField != null) inputField.text = "";
             if (button != null) button.interactable = true;
             if (inputField != null) inputField.interactable = true;
         }

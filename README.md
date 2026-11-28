@@ -63,7 +63,25 @@ Use the [scene and activity map](docs/ACTIVITY_MAP.md) to browse the seven menu/
 | Local answer values | [setUserData](Assets/setUserData.cs) |
 | Accounts and score integration | [LoginController](Assets/LoginController.cs), [WebController](Assets/WebController.cs), [StoreDataController](Assets/StoreDataController.cs), and [StoreEksController](Assets/StoreEksController.cs) |
 
-## Open the project
+## Browser demo
+
+For a browser demo, install Web Build Support for the project's Unity version,
+switch the target to Web, and choose **Tools → Portfolio → Build Web Demo**. The
+build is written to `Build/PortfolioWeb`. It opens at the main menu.
+Open the demo in its own browser tab to save quiz and experiment scores. The
+tutor uses prewritten Malay replies from `ChatGPT.DemoAnswer`. The browser demo
+opens without a server account.
+
+### Publish to GitHub Pages
+
+Compress the contents of `Build/PortfolioWeb` into `virtual-lab-webgl.zip`. Put
+`index.html` and `Build/` at the root of the ZIP. Attach it to a tagged GitHub
+Release for the commit you built. In the repository’s **Settings → Pages**, set
+the source to **GitHub Actions**. On `main`, run **Deploy WebGL demo** in the
+Actions tab and enter the release tag. The workflow deploys the extracted build,
+including files that exceed GitHub’s per-file Git limit.
+
+## Open the Unity project
 
 1. Clone or download the **complete repository**, including `Assets`, `Packages`, `ProjectSettings`, and Unity `.meta` files. A source-only checkout is sufficient for reading code but not for importing or running the application.
 2. Add the repository root in Unity Hub and open it with **6000.6.7f1**, as recorded in [ProjectVersion.txt](ProjectSettings/ProjectVersion.txt). Avoid an editor upgrade during the first inspection.

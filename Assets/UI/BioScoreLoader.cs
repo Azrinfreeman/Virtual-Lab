@@ -9,6 +9,18 @@ public static class BioScoreLoader
     public static IEnumerator Load(TMP_Text label, string domain, int activity, bool quiz)
     {
         if (label == null) yield break;
+#if UNITY_WEBGL
+        string scoreKey = (quiz ? "web-quiz-" : "web-experiment-") + activity;
+        if (PlayerPrefs.HasKey(scoreKey))
+        {
+            label.text = PlayerPrefs.GetInt(scoreKey) + " / 10";
+        }
+        else
+        {
+            label.text = "Tidak tersedia";
+        }
+        yield break;
+#else
         label.text = "Memuat...";
         int user = PlayerPrefs.GetInt("id_user");
         Uri endpoint;
@@ -32,5 +44,6 @@ public static class BioScoreLoader
                 int.TryParse(request.downloadHandler.text.Trim(), out score) && score >= 0 && score <= 10
                 ? score + " / 10" : "Tidak tersedia";
         }
+#endif
     }
 }

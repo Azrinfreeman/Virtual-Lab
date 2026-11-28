@@ -1,0 +1,50 @@
+name: Deploy WebGL demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release tag containing virtual-lab-webgl.zip
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  package:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and extract the WebGL release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          archive="$RUNNER_TEMP/virtual-lab-webgl.zip"
+          gh release download --repo "$GITHUB_REPOSITORY" --pattern virtual-lab-webgl.zip --output "$archive" -- "$RELEASE_TAG"
+          unzip -q "$archive" -d site
+          test -s site/index.html
+          test -d site/Build
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
